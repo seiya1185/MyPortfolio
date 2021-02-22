@@ -76,31 +76,39 @@ $(function() {
   var dir = -1;
   var duration = 700;
 
- // ------ PCサイドのスライド部分 ------
+  slide();
 
- // 前へ戻るボタン
-  $("#prevBtn").click(function() {
-    dir = 1;
-  });
-
- // 次へ進むボタン
-  $("#nextBtn").click(function() {
-    dir = -1;
-  });
-
- // スクロール方向の判断
-  if (dir === -1) {
+  function slide() {
+    // スクロール方向の判断
+  if (dir == -1) {
     $("#slide ul").animate({"left" : "-=850px" },
     duration, function() {
       $(this).append($("#slide li:first-child"));
       $(this).css("left", -850);
     });
- } else {
+ }else{
     $("#slide ul").animate({"left" : "+=850px" },
     duration, function() {
       $(this).prepend($("#slide li:last-child"));
       $(this).css("left", -850);
     });
   }
+}
+
+ // 前へ戻るボタン
+  $("#prevBtn").click(function() {
+    dir = 1;
+
+    slide();
+  });
+
+ // 次へ進むボタン
+  $("#nextBtn").click(function() {
+    dir = -1;
+
+    slide();
+  });
+
+ 
 });
 
