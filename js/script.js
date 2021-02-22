@@ -41,10 +41,26 @@ $(function() {
 
   //スワイプの方向（top／bottom）を取得
   function onTouchMove(event) {
+
+    var duration = 700;
+
     if (position - getPosition(event) > 50) { // 50px以上移動しなければスワイプと判断しない
       direction = 'top'; //上と検知
+
+      $("#slide ul").animate({"top" : "-=250px" },
+      duration, function() {
+        $("#slide ul").append($("#slide li:first-child"));
+        $("#slide ul").css("top", -250);
+      });
+
     } else if (position - getPosition(event) < -50){  // 50px以上移動しなければスワイプと判断しない
       direction = 'bottom'; //下と検知
+
+      $("#slide ul").animate({"bottom" : "-=250px" },
+      duration, function() {
+        $("#slide ul").prepend($("#slide li:last-child"));
+        $("#slide ul").css("bottom", -250);
+      });
     }
   }
 
@@ -53,17 +69,38 @@ $(function() {
     return event.originalEvent.touches[0].pageX;
   }
 });
+// ------ スライド部分終了 ------
 
-
-// ------ スライド部分 ------
 $(function() {
-  // スクロールのスピード（700ミリ秒に設定）
+
+  var dir = -1;
   var duration = 700;
 
-  // リストの順番を変更（4番目を1番最初にする）
-  $("#slide ul").prepend($("#slide li:last-child"));
+ // ------ PCサイドのスライド部分 ------
 
-  // リストの位置を変更（画像を1枚分ずらす）
-  $("#slide ul").css("top", -250);
+ // 前へ戻るボタン
+  $("#prevBtn").click(function() {
+    dir = 1;
+  });
 
+ // 次へ進むボタン
+  $("#nextBtn").click(function() {
+    dir = -1;
+  });
+
+ // スクロール方向の判断
+  if (dir === -1) {
+    $("#slide ul").animate({"left" : "-=850px" },
+    duration, function() {
+      $(this).append($("#slide li:first-child"));
+      $(this).css("left", -850);
+    });
+ } else {
+    $("#slide ul").animate({"left" : "+=850px" },
+    duration, function() {
+      $(this).prepend($("#slide li:last-child"));
+      $(this).css("left", -850);
+    });
+  }
 });
+
