@@ -1,0 +1,16 @@
+@import url('reset/reset.css');
+@import 'setting/setting';
+@import 'mixin/_mixin';
+@import 'breakpoints/_base';
+
+@include mq() {
+    @import 'breakpoints/_sp';
+};
+
+@include mq($breakpoint: tab) {
+    @import 'breakpoints/_tab';
+};
+
+@include mq($breakpoint: pc) {
+    @import 'breakpoints/_pc';
+};

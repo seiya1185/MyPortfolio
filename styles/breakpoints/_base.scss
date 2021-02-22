@@ -1,0 +1,564 @@
+// 共通スタイル
+
+$color-black: #333333;
+$color-white: #ffffff;
+
+//font-family
+//-->ヒラギノver.
+$font-main: "Noto Sans JP","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+  Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+//ブレイクポイント
+$tb: 959px; //タブレット
+$mb: 559px; //スマホ
+
+//@mediaのフォーマット
+//タブレット
+@mixin tablet {
+  @media screen and (max-width: $tb) {
+    @content;
+  }
+}
+//スマホ
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
+//*------------------*
+//*  font-size定義
+//*------------------*
+//$sizeにpx表示を入れて使う
+
+@mixin rem($size) {
+    font-size: $size + px; /*IE9以前に対応する*/
+    font-size: ($size / 16) + rem;
+  }
+
+//*------------------*
+//*  base(共通)
+//*------------------*
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include rem(20);
+  letter-spacing: 0.1em;
+  color: $color-black;
+  font-family: $font-main;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+//*------------------*
+//*  header
+//*------------------*
+.header {
+  background-color: rgba(135, 25, 0, 0.9);
+  z-index: 100;
+  &__inner {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// スマホにあてるスタイル
+//------------ここからhamburgerメニュー----------------->
+//スマホのナビゲーション(ハンバーガーメニュー)
+//ハンバーガーの部分
+
+
+//------------//ここまでhamburgerメニュー------------------>
+
+//*------------------*
+//*  fv
+//*------------------*
+
+.main {
+  .fv {
+    background-image: url("../img/pc/fv-image.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100%;
+    text-align: center;
+    display: table;
+    .texts {
+      display: table-cell;
+      vertical-align: middle;
+      .fv-theme {
+        @include rem(53);
+        margin: 40px 0 50px;
+        letter-spacing: normal;
+      }
+      .fv-tx {
+        @include rem(15);
+        letter-spacing: normal;
+      }
+    }
+  }
+
+
+  // sectionの一つ目
+  .ft-section {
+    background-color: #932E40;
+    color: #fff;
+    padding: 85px 0 35px;
+  }
+
+  //sectionの共通タイトル設定
+  .section__ttl {
+    @include rem(35);
+    text-align: center;
+    margin-bottom: 95px;
+    font-weight: normal;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+      bottom: -15px;
+      width: 250px;
+      height: 1px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    &:after {
+      position: absolute;
+      top: -10px;
+      content: '';
+      display: inline-block;
+      transform: rotate(210deg);
+      width:2em;
+      height:2em;
+      background: url("../img/pc/icho.png") no-repeat;
+      background-size: contain;
+      margin-left: 15px;
+    }
+  }
+
+
+  //sectionの共通inner設定
+  .section__inner {
+    @include rem(20);
+    margin: 0 auto;
+    line-height: 3;
+    ul > li {
+      float: left;
+      text-decoration: underline;
+      list-style-type: square;
+    }
+  }
+
+  // ft-sectionの枠内
+  .s-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    color: $color-black;
+    height: 35vh;
+    width: 860px;
+  }
+
+  .ft-text {
+    @include rem(22);
+    margin: 70px 0 0;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .ft-text2 {
+    @include rem(22);
+    margin: 0 0 90px;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .section__message {
+    @include rem(22);
+    text-align: center;
+    margin-bottom: 85px;
+    a {
+      color: #fff;
+      margin-left: 35px;
+      padding: 20px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: -45px;
+        top: 36px;
+        width: 45px;
+        border-bottom: solid 2px #fff;
+      }
+    }
+  }
+
+// --- サービス内容 ---
+// --- サービス内容の3つあるトピック ---
+.ser-menus {
+  display: flex;
+  justify-content: center;
+  .ser-content {
+      height: 100%;
+      border: 1px solid #333;
+      border-radius: 3px;
+  .image {
+      text-align: center;
+      p {
+          margin: 1.5em 0;
+          letter-spacing: 0.2em;
+      }
+      img {
+          height: 95px;
+          width: 95px;
+          margin-bottom: 1.5em;
+      }
+  }
+  .text-content {
+      background-color: #738851;
+      height: 8em;
+      color: $color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .topic {
+          margin-bottom: 8px;
+          }
+      }
+  }
+}
+
+// --- 実績のセクション部分 ---
+  .works-section {
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 1px 0 110px;
+    .work-heading {
+      .work-theme {
+        &:before {
+          content: '制作実績';
+          position: absolute;
+          letter-spacing: 0.2em;
+          font-weight: bold;
+          color: #333;
+        }
+      }
+    }
+
+    // --- 実績サイトスライド部分 ---
+  .slide-wrapper {
+    margin: 0 auto;
+  }
+}
+
+  // --- ここまで実績のセクション ---
+
+  .price-section {
+    background-color: #932E40;
+    color: #fff;
+    text-align: center;
+    padding: 95px 0 115px;
+    .price-heading {
+      .price-theme {
+        color: rgba(255,255,255,0.4);
+        margin-top: 0;
+        &:before {
+          content: '価格';
+          position: absolute;
+          top: 70px;
+          left: 796px;
+          letter-spacing: 0.2em;
+          font-weight: bold;
+          color: #fff;
+          @include rem(30);
+        }
+        &:after {
+          position: absolute;
+          top: 38px;
+          content: '';
+          display: inline-block;
+          transform: rotate(220deg);
+          width: 0.8em;
+          height: 0.8em;
+          background: url("../img/pc/reaf.png") no-repeat;
+          background-size: contain;
+          margin-left: 8px;
+        }
+      }
+    }
+    .price-tx {
+      letter-spacing: .3em;
+      @include rem(18);
+      line-height: 2em;
+      margin-bottom: 5em;
+    }
+    .price-table {
+    margin:0 auto;
+    color: $color-black;
+    font-size:1.1em;
+    border-collapse:separate;
+    border-spacing:1px;
+    box-shadow: 10px 10px #888;
+    th,td {
+      padding: 25px 70px;
+    }
+    th {
+      background: #E5E5E5;
+    }
+    td {
+      background: #FFF;
+    }
+    span {
+      @include rem(14);
+    }
+  }
+}
+
+  .about-section {
+    background-image: repeating-linear-gradient(
+    45deg,
+    #e8e8e8,#e8e8e8 5px,
+    rgba(0,0,0,0)0,
+    rgba(0,0,0,0)10px
+    );
+    padding: 1px 0 110px;
+    .about-heading {
+      text-align: center;
+      .about-theme {
+        &:before {
+          content: 'プロフィール';
+          position: absolute;
+          top: 70px;
+          left: 770px;
+          letter-spacing: 0.2em;
+          font-weight: bold;
+          color: $color-black;
+          @include rem(30);
+        }
+      }
+    }
+    .about-content {
+      display: flex;
+      justify-content: center;
+      height: 600px;
+      align-items: center;
+      .profile-text {
+        margin-left: 230px;
+        .pr-place {
+          border-bottom: 1px solid #000;
+          font-weight: 300;
+          margin-left: 25px;
+          margin-bottom: 25px;
+        }
+        .pr-tx {
+          margin: 45px 0;
+          @include rem(20);
+        }
+      }
+    }
+  }
+
+  // プロフィール画像部分
+  .profile-image > img {
+      width: 550px;
+      height: 550px;
+      object-fit: cover;
+      border-radius: 50%;
+  }
+
+  // -----画像から出る線部分-----
+  .pr-theme1 {
+    width: 435px;
+    position: relative;
+    &:before {
+      content:"";
+      position: absolute;
+      top: 22px;
+      left: -275px;
+      transform: skewX(-52deg);
+      height: 98px;
+      width: 185px;
+      border-left: 1px solid #707070;
+      border-top: 1px solid #909090;
+    }
+    span {
+      @include rem(20);
+    }
+  }
+
+  .pr-theme2 {
+    width: 210px;
+    position: relative;
+    &:before {
+      content:"";
+      position: absolute;
+      top: 22px;
+      left: -245px;
+      transform: skewX(-52deg);
+      height: 81px;
+      width: 165px;
+      border-left: 1px solid #707070;
+      border-top: 1px solid #909090;
+    }
+  }
+
+  .pr-theme3 {
+    width: 510px;
+    position: relative;
+    &:before {
+      content:"";
+      position: absolute;
+      top: 32px;
+      left: -245px;
+      transform: skew(40deg,-38deg);
+      height: 81px;
+      width: 185px;
+      border-left: 1px solid #909090;
+      border-bottom: 1px solid #909090;
+    }
+  }
+  // -----画像から出る線部分終わり-----
+
+
+  // --- ここからお問い合わせフォームのデザイン ---
+
+  .message-section {
+    .message-heading {
+      text-align: center;
+      .message-theme {
+        &:before {
+          content: 'お問い合わせ';
+          position: absolute;
+          top: 70px;
+          left: 700px;
+          letter-spacing: 0.2em;
+          font-weight: bold;
+          color: $color-black;
+          @include rem(30);
+        }
+      }
+    }
+  }
+
+  // --- フォームの装飾 ---
+
+  form div {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 25px;
+  }
+
+  form div span {
+    border: 1px #932E40 solid;
+    background-color: #932E40;
+    color: $color-white;
+    @include rem(14);
+    padding: 0 5px ;
+    margin-left: 10px;
+  }
+
+  label {
+    margin-left: 5px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  input[type="name"],
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    border: 1px $color-black solid;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  textarea {
+    height: 300px;
+  }
+
+  input[type="submit"] {
+    margin: 15px 0 70px 210px;
+    background-color: #932E40;
+    padding: 15px 28px;
+    border-radius: 30px;
+    color: $color-white;
+    @include rem(18);
+  }
+
+  // --- ここまでフォームの装飾 ---
+
+  // --- ここまでお問い合わせのフォームのデザイン ---
+
+  // --- ここからフッターのデザイン ---
+
+}
+// --- サービスはここまで ---
+
+// --- ここから実績内容 ---
+
+
+.footer {
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../img/pc/footer-image.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 40vh;
+  min-width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  .twitter-icon > a {
+    color: $color-white;
+  }
+  .nav {
+    margin-left: 500px;
+    .nav__lists {
+      display: flex;
+      .nav__list > a {
+        color: $color-white;
+        @include rem(16);
+        margin-left: 50px;
+      }
+    }
+  }
+}
+
+// -- Twitterアイコン色・配置 --
+.icon-color {
+  color: $color-white;
+}
+.fab {
+  margin-right: 5px;
+  display: inline-block;
+}
+// -- アイコン色・配置ここまで --
+
+// --- ここまでフッターのデザイン ---
+
+//*------------------*
+//*  section
+//*------------------*
+
+//*------------------*
+//*  footer
+//*------------------*

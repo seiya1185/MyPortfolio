@@ -1,0 +1,26 @@
+//ベース色
+$color-main: #EBB94D;
+$color-sub: #FEF5E0;
+$color-accent1: #DA6B64;
+$color-accent2: #016EA9;
+
+//文字色
+$color-text: #353535;
+$color-white: #ffffff;
+$color-str: #C7254E;
+$color-tw: #1C96E0;
+$color-fb: #1A76F2;
+
+//透明度
+$opacity: 0.6;
+
+//フォント
+$font-family: Roboto;
+
+//サイズ
+$layout-width-inner: 1080px;
+$breakpoints: (
+    "sp": "screen and (max-width: 480px)",
+    "tab": "screen and (min-width: 480px) and (max-width: 1080px)",
+    "pc": "screen and (min-width: 1080px)"
+);
