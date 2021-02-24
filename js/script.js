@@ -76,7 +76,6 @@ $(function() {
   var dir = -1;
   var duration = 700;
 
-  slide();
 
   function slide() {
     // スクロール方向の判断
