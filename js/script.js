@@ -76,6 +76,9 @@ $(function() {
   var dir = -1;
   var duration = 700;
 
+  $("#slide ul").prepend($("#slide li:last-child"));
+
+  $("#slide ul").css("left", -850);
 
   function slide() {
     // スクロール方向の判断
