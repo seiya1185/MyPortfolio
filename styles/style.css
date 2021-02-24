@@ -987,32 +987,6 @@ li {
   .works-section .slide-wrapper #slide ul li {
     width: 850px;
   }
-  .works-section #button {
-    padding-top: 25px;
-    text-align: center;
-  }
-  .works-section #button ul {
-    display: flex;
-    justify-content: center;
-  }
-  .works-section #button ul li {
-    margin-right: 20px;
-  }
-  .works-section #button ul li:last-child {
-    margin-right: 0;
-  }
-  .works-section #button ul li a {
-    text-indent: -9999px;
-    text-decoration: none;
-    display: block;
-    width: 14px;
-    height: 14px;
-    border-radius: 7px;
-    background: #b37984;
-  }
-  .works-section #button ul li a.target {
-    background: #932E40;
-  }
   .works-section #prevBtn {
     position: absolute;
     top: 230px;
