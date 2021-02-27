@@ -108,8 +108,9 @@ li {
         letter-spacing: normal;
       }
       .fv-tx {
-        @include rem(15);
+        @include rem(13);
         letter-spacing: normal;
+        text-shadow:  3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
       }
     }
   }
