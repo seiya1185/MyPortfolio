@@ -50,13 +50,19 @@
 }
 
 .section__end {
-    margin-bottom: 80px;
     text-align: center;
-    .section-icon p {
-        padding-top: 30px;
-        &span {
+    a {
+        margin-top: 100px;
+        position: relative;
+        color: #fff;
+        z-index: 2;
+        display: inline-block;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        text-decoration: none;
+        span {
             position: absolute;
-            top: 0;
+            top: -70px;
             left: 50%;
             width: 24px;
             height: 24px;
@@ -69,6 +75,7 @@
             animation: sdb 1.5s infinite;
             box-sizing: border-box;
         }
+    }
         @-webkit-keyframes sdb {
             0% {
                 -webkit-transform: rotate(-45deg) translate(0, 0);
@@ -93,7 +100,6 @@
             100% {
                 transform: rotate(-45deg) translate(-20px, 20px);
                 opacity: 0;
-            }
         }
     }
 }
