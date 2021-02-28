@@ -77,6 +77,10 @@ $(document).ready(function()
 
   var duration = 700;
 
+  ("#slide ul").prepend($("#slide li:last-child"));
+
+  $("#slide ul").css("top", -250);
+
 	/** ①指が触れたか検知 */
 	$("#swipe").on("touchstart", start_check);
 
@@ -127,11 +131,19 @@ $(document).ready(function()
 
 		if (moveY == "top")
 		{
-			$("#slide ul").animate({"top" : "=250px" })
+			$("#slide ul").animate({"top" : "-=250px" },
+      duration, function() {
+        $(this).append($("#slide li:first-child"));
+        $(this).css("top", -250);
+      });
 		}
 		else if (moveY == "bottom")
 		{
-			("#slide ul").animate({"bottom" : "=250px" })
+			("#slide ul").animate({"bottom" : "-=250px" },
+      duration, function() {
+        $(this).prepend($("#slide li:last-child"));
+        $(this).css("bottom", -250);
+      });
 		}
 		else
 		{
