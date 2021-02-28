@@ -70,7 +70,10 @@ if (!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
   });
 }
 
-// ------ 実績のスワイプ部分 -----
+  // ------ 実績のスワイプ部分 -----
+if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+  //ここに書いた処理はスマホの時だけ有効
+
 
 $(document).ready(function()
 {
@@ -166,4 +169,7 @@ $(document).ready(function()
 });
 
 // ------ 実績のスワイプ部分ここまで -----
+}
+
+
 
