@@ -112,7 +112,7 @@
             content: 'サービス';
             position: absolute;
             top: 70px;
-            left: 720px;
+            left: 37%;
             letter-spacing: 0.2em;
             font-weight: bold;
             color: #333;
@@ -170,36 +170,18 @@
         background-color: #738851;
         height: 8em;
         color: $color-white;
-        @include rem(18);
+        @include rem(16);
         display: flex;
         justify-content: center;
         align-items: center;
         .topic {
-            @include rem(17);
+            @include rem(15);
             margin-bottom: 8px;
             }
         }
     }
 }
 
-.ser-menus {
-    margin-bottom: 15vh;
-    .ser-content {
-        width: 24%;
-        margin:0 2.5vh 0;
-    }
-    .image {
-        > p {
-            @include rem(23);
-        }
-    }
-    .text-content {
-        @include rem(18);
-        .topic {
-            @include rem(17);
-        }
-    }
-}
 
 // --- 実績のセクション部分 ---
 .works-section {
@@ -210,7 +192,7 @@
         .work-theme {
             &:before {
                 top: 70px;
-                left: 780px;
+                left: 40%;
                 @include rem(30);
             }
         }

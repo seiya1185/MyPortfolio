@@ -273,7 +273,7 @@ li {
   content: '価格';
   position: absolute;
   top: 70px;
-  left: 796px;
+  left: 42%;
   letter-spacing: 0.2em;
   font-weight: bold;
   color: #fff;
@@ -346,7 +346,7 @@ li {
   content: 'プロフィール';
   position: absolute;
   top: 70px;
-  left: 770px;
+  left: 40%;
   letter-spacing: 0.2em;
   font-weight: bold;
   color: #333333;
@@ -462,7 +462,7 @@ li {
   content: 'お問い合わせ';
   position: absolute;
   top: 70px;
-  left: 700px;
+  left: 37%;
   letter-spacing: 0.2em;
   font-weight: bold;
   color: #333333;
@@ -980,7 +980,7 @@ li {
     content: 'サービス';
     position: absolute;
     top: 70px;
-    left: 720px;
+    left: 37%;
     letter-spacing: 0.2em;
     font-weight: bold;
     color: #333;
@@ -1043,9 +1043,9 @@ li {
     background-color: #738851;
     height: 8em;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 16px;
     /*IE9以前に対応する*/
-    font-size: 1.125rem;
+    font-size: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1057,32 +1057,10 @@ li {
             align-items: center;
   }
   .ser-menus .ser-content .text-content .topic {
-    font-size: 17px;
+    font-size: 15px;
     /*IE9以前に対応する*/
-    font-size: 1.0625rem;
+    font-size: 0.9375rem;
     margin-bottom: 8px;
-  }
-  .ser-menus {
-    margin-bottom: 15vh;
-  }
-  .ser-menus .ser-content {
-    width: 24%;
-    margin: 0 2.5vh 0;
-  }
-  .ser-menus .image > p {
-    font-size: 23px;
-    /*IE9以前に対応する*/
-    font-size: 1.4375rem;
-  }
-  .ser-menus .text-content {
-    font-size: 18px;
-    /*IE9以前に対応する*/
-    font-size: 1.125rem;
-  }
-  .ser-menus .text-content .topic {
-    font-size: 17px;
-    /*IE9以前に対応する*/
-    font-size: 1.0625rem;
   }
   .works-section {
     background-image: url("../img/pc/works-image.jpg");
@@ -1091,7 +1069,7 @@ li {
   }
   .works-section .work-heading .work-theme:before {
     top: 70px;
-    left: 780px;
+    left: 40%;
     font-size: 30px;
     /*IE9以前に対応する*/
     font-size: 1.875rem;
