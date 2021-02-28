@@ -81,6 +81,10 @@ $(document).ready(function()
 
   $("#slide ul").css("top", -250);
 
+  $(window).on('touchmove.noScroll', function(e) {
+    e.preventDefault();
+    });
+
 	/** ①指が触れたか検知 */
 	$("#swipe").on("touchstart", start_check);
 
