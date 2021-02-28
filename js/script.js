@@ -69,5 +69,89 @@ if (!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
     });
   });
 }
-// ----- PCのスクロール部分終了 -----
+
+// ------ 実績のスワイプ部分 -----
+
+$(document).ready(function()
+{
+
+  var duration = 700;
+
+	/** ①指が触れたか検知 */
+	$("#swipe").on("touchstart", start_check);
+
+	/** ②指が動いたか検知 */
+	$("#swipe").on("touchmove", move_check);
+
+	/** ③指が離れたか検知 */
+	$("#swipe").on("touchend", end_check);
+
+	/** 変数宣言 */
+	var moveY, posiY;
+
+
+	// ⑤タッチ開始時の処理
+	function start_check(event) 
+	{
+		/** 現在の座標取得 */
+		posiY = getY(event);
+
+		/** 移動距離状態を初期化 */
+		moveY = '';
+
+		/** 表示メッセージを初期化 */
+		msgY = '';
+	}
+
+	// ⑥スワイプ中の処理
+	function move_check(event)
+	{
+
+
+		if (posiY - getY(event) > 70) // 70px以上移動でスワイプと判断
+		{
+			/** 下→上と判断 */
+			moveY = "top";
+		}
+		else if (posiY - getY(event) < -70)  // 70px以上移動でスワイプと判断
+		{
+			/** 上→下と判断 */
+			moveY = "bottom";
+		}
+	}
+
+	// ⑦指が離れた時の処理
+	function end_check(event)
+	{
+
+
+		if (moveY == "top")
+		{
+			$("#slide ul").animate({"top" : "=250px" })
+		}
+		else if (moveY == "bottom")
+		{
+			("#slide ul").animate({"top" : "-=250px" })
+		}
+		else
+		{
+			return false;
+		}
+
+
+
+	}
+
+
+	// 座標取得処理
+	function getY(event)
+	{
+		//縦方向の座標を取得
+		return (event.originalEvent.touches[0].pageY);
+	}
+
+
+});
+
+// ------ 実績のスワイプ部分ここまで -----
 
