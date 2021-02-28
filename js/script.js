@@ -131,7 +131,7 @@ $(document).ready(function()
 		}
 		else if (moveY == "bottom")
 		{
-			("#slide ul").animate({"top" : "-=250px" })
+			("#slide ul").animate({"bottom" : "=250px" })
 		}
 		else
 		{
