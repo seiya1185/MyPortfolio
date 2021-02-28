@@ -77,7 +77,7 @@ $(document).ready(function()
 
   var duration = 700;
 
-  ("#slide ul").prepend($("#slide li:last-child"));
+  $("#slide ul").prepend($("#slide li:last-child"));
 
   $("#slide ul").css("top", -250);
 
@@ -94,8 +94,8 @@ $(document).ready(function()
 	var moveY, posiY;
 
 
-	// ⑤タッチ開始時の処理
-	function start_check(event) 
+	// ④タッチ開始時の処理
+	function start_check(event)
 	{
 		/** 現在の座標取得 */
 		posiY = getY(event);
@@ -107,7 +107,7 @@ $(document).ready(function()
 		msgY = '';
 	}
 
-	// ⑥スワイプ中の処理
+	// ⑤スワイプ中の処理
 	function move_check(event)
 	{
 
@@ -124,7 +124,7 @@ $(document).ready(function()
 		}
 	}
 
-	// ⑦指が離れた時の処理
+	// ⑥指が離れた時の処理
 	function end_check(event)
 	{
 
@@ -137,17 +137,13 @@ $(document).ready(function()
         $(this).css("top", -250);
       });
 		}
-		else if (moveY == "bottom")
+		else (moveY == "bottom")
 		{
-			("#slide ul").animate({"bottom" : "-=250px" },
+			$("#slide ul").animate({"bottom" : "-=250px" },
       duration, function() {
         $(this).prepend($("#slide li:last-child"));
         $(this).css("bottom", -250);
       });
-		}
-		else
-		{
-			return false;
 		}
 
 
