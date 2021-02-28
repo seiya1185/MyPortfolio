@@ -81,7 +81,7 @@ $(document).ready(function()
 
   $("#slide ul").css("top", -250);
 
-  $(window).on('touchmove.noScroll', function(e) {
+  $(!swipe).on('touchmove.noScroll', function(e) {
     e.preventDefault();
     });
 
