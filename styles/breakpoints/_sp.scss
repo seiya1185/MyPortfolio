@@ -139,7 +139,7 @@
     }
     .section__inner {
       @include rem(16);
-      padding: 0 5vw 0 10vw;
+      padding: 0 40px 0 10vw;
     }
     .s-wrapper {
       height: 60vh;
@@ -153,22 +153,6 @@
       text-align: left;
       margin: 10px 25px 90px;
     }
-  }
-}
-
-.section__end {
-  margin-bottom: 80px;
-  text-align: center;
-  position: relative;
-    &:after {content: '';
-    left: 165px;
-    top: 60px;
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-style: solid;
-    border-width: 30px 20px 0 20px;
-    border-color: #ffffff transparent transparent transparent;
   }
 }
 
@@ -191,7 +175,7 @@
           content: 'サービス';
           position: absolute;
           top: 45px;
-          left: 50px;
+          left: 20%;
           letter-spacing: 0.2em;
           font-weight: bold;
           color: #333;
@@ -222,7 +206,7 @@
   flex-direction: column;
   margin-bottom: 10vh;
   .ser-content {
-    width: 335px;
+    width: 86%;
     margin: 0 auto 20px;
   }
   .image {
@@ -231,7 +215,7 @@
     }
   }
   .text-content {
-    @include rem(13);
+    @include rem(12);
     padding: 6px;
     .topic {
       @include rem(12);
@@ -249,7 +233,7 @@
     .work-theme {
       &:before {
         top: 45px;
-        left: 75px;
+        left: 22%;
         @include rem(26);
       }
     }
@@ -277,5 +261,61 @@
   }
   #button {
     display: none;
+  }
+}
+
+.price-section {
+  padding: 95px 0 50px;
+  .price-heading {
+    .price-theme {
+      &:before {
+        top: 40px;
+        left: 25%;
+        @include rem(26);
+      }
+      &:after {
+        top:23px;
+        margin-left: 5px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .price-tx {
+    @include rem(14);
+    margin-bottom: 4em;
+    text-align: center;
+    .p-tx1 {
+      margin-bottom: 25px;
+    }
+    .p-tx2 {
+      padding: 0 10px;
+    }
+  }
+  .price-table {
+    text-align: center;
+    th {
+      font-size: 0.7em;
+      padding: 30px 0;
+    }
+    td {
+      font-size: 0.55em;
+      padding: 15px 10px;
+    }
+    span {
+      font-size: 6px;
+    }
+  }
+}
+
+.about-section {
+  .about-heading {
+      .about-theme {
+          &:before {
+              top: 40px;
+              left: 20%;
+              @include rem(22);
+          }
+      }
   }
 }

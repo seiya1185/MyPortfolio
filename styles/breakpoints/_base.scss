@@ -213,6 +213,62 @@ li {
     }
   }
 
+  .section__end {
+    text-align: center;
+    a {
+        margin-top: 100px;
+        position: relative;
+        color: #fff;
+        z-index: 2;
+        display: inline-block;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        text-decoration: none;
+        span {
+            position: absolute;
+            top: -70px;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            margin-left: -12px;
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-animation: sdb 1.5s infinite;
+            animation: sdb 1.5s infinite;
+            box-sizing: border-box;
+        }
+    }
+        @-webkit-keyframes sdb {
+            0% {
+                -webkit-transform: rotate(-45deg) translate(0, 0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+                opacity: 0;
+            }
+        }
+        @keyframes sdb {
+            0% {
+                transform: rotate(-45deg) translate(0, 0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(-45deg) translate(-20px, 20px);
+                opacity: 0;
+        }
+    }
+}
+
+
 // --- サービス内容 ---
 // --- サービス内容の3つあるトピック ---
 .ser-menus {
@@ -277,60 +333,42 @@ li {
   .price-section {
     background-color: #932E40;
     color: #fff;
-    text-align: center;
-    padding: 95px 0 115px;
     .price-heading {
+      text-align: center;
       .price-theme {
         color: rgba(255,255,255,0.4);
         margin-top: 0;
         &:before {
           content: '価格';
           position: absolute;
-          top: 70px;
-          left: 42%;
-          letter-spacing: 0.2em;
+          letter-spacing: 0.3em;
           font-weight: bold;
           color: #fff;
-          @include rem(30);
         }
         &:after {
           position: absolute;
-          top: 38px;
           content: '';
           display: inline-block;
           transform: rotate(220deg);
-          width: 0.8em;
-          height: 0.8em;
           background: url("../img/pc/reaf.png") no-repeat;
           background-size: contain;
-          margin-left: 8px;
         }
       }
     }
     .price-tx {
       letter-spacing: .3em;
-      @include rem(18);
-      line-height: 2em;
-      margin-bottom: 5em;
+      line-height: 25px;
     }
     .price-table {
-    margin:0 auto;
+    margin: 0 auto;
     color: $color-black;
-    font-size:1.1em;
-    border-collapse:separate;
-    border-spacing:1px;
-    box-shadow: 10px 10px #888;
-    th,td {
-      padding: 25px 70px;
-    }
+    border-collapse: separate;
+    border-spacing: 1px;
     th {
       background: #E5E5E5;
     }
     td {
       background: #FFF;
-    }
-    span {
-      @include rem(14);
     }
   }
 }
@@ -349,31 +387,27 @@ li {
         &:before {
           content: 'プロフィール';
           position: absolute;
-          top: 70px;
-          left: 40%;
           letter-spacing: 0.2em;
           font-weight: bold;
           color: $color-black;
-          @include rem(30);
         }
       }
     }
+
     .about-content {
-      display: flex;
-      justify-content: center;
-      height: 600px;
       align-items: center;
       .profile-text {
-        margin-left: 230px;
         .pr-place {
           border-bottom: 1px solid #000;
           font-weight: 300;
-          margin-left: 25px;
+          margin-left: 30px;
           margin-bottom: 25px;
+          text-shadow:  3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
         }
         .pr-tx {
-          margin: 45px 0;
-          @include rem(20);
+          margin: 45px 30px 45px 0;
+          @include rem(16);
+          text-shadow:  3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
         }
       }
     }
@@ -381,11 +415,12 @@ li {
 
   // プロフィール画像部分
   .profile-image > img {
-      width: 550px;
-      height: 550px;
+      width: 530px;
+      height: 530px;
       object-fit: cover;
       border-radius: 50%;
-  }
+      margin-left: 20px;
+    }
 
   // -----画像から出る線部分-----
   .pr-theme1 {
@@ -397,7 +432,7 @@ li {
       top: 22px;
       left: -275px;
       transform: skewX(-52deg);
-      height: 88px;
+      height: 90px;
       width: 185px;
       border-left: 1px solid #707070;
       border-top: 1px solid #909090;
@@ -416,7 +451,7 @@ li {
       top: 22px;
       left: -245px;
       transform: skewX(-52deg);
-      height: 73px;
+      height: 75px;
       width: 165px;
       border-left: 1px solid #707070;
       border-top: 1px solid #909090;
@@ -429,11 +464,11 @@ li {
     &:before {
       content:"";
       position: absolute;
-      top: 23px;
+      top: 10px;
       left: -245px;
       transform: skew(40deg,-38deg);
-      height: 84px;
-      width: 185px;
+      height: 85px;
+      width: 170px;
       border-left: 1px solid #909090;
       border-bottom: 1px solid #909090;
     }
@@ -451,7 +486,7 @@ li {
           content: 'お問い合わせ';
           position: absolute;
           top: 70px;
-          left: 37%;
+          left: 35%;
           letter-spacing: 0.2em;
           font-weight: bold;
           color: $color-black;
@@ -514,9 +549,7 @@ li {
   // --- ここからフッターのデザイン ---
 
 }
-// --- サービスはここまで ---
 
-// --- ここから実績内容 ---
 
 
 .footer {
@@ -532,12 +565,12 @@ li {
     color: $color-white;
   }
   .nav {
-    margin-left: 500px;
+    margin-left: 420px;
     .nav__lists {
       display: flex;
       .nav__list > a {
         color: $color-white;
-        @include rem(16);
+        @include rem(15);
         margin-left: 50px;
       }
     }

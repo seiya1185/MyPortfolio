@@ -189,6 +189,68 @@ li {
   border-bottom: solid 2px #fff;
 }
 
+.main .section__end {
+  text-align: center;
+}
+
+.main .section__end a {
+  margin-top: 100px;
+  position: relative;
+  color: #fff;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-decoration: none;
+}
+
+.main .section__end a span {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+@keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+            transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+            transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
 .main .ser-menus {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,8 +322,10 @@ li {
 .main .price-section {
   background-color: #932E40;
   color: #fff;
+}
+
+.main .price-section .price-heading {
   text-align: center;
-  padding: 95px 0 115px;
 }
 
 .main .price-section .price-heading .price-theme {
@@ -272,51 +336,31 @@ li {
 .main .price-section .price-heading .price-theme:before {
   content: '価格';
   position: absolute;
-  top: 70px;
-  left: 42%;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.3em;
   font-weight: bold;
   color: #fff;
-  font-size: 30px;
-  /*IE9以前に対応する*/
-  font-size: 1.875rem;
 }
 
 .main .price-section .price-heading .price-theme:after {
   position: absolute;
-  top: 38px;
   content: '';
   display: inline-block;
   -webkit-transform: rotate(220deg);
           transform: rotate(220deg);
-  width: 0.8em;
-  height: 0.8em;
   background: url("../img/pc/reaf.png") no-repeat;
   background-size: contain;
-  margin-left: 8px;
 }
 
 .main .price-section .price-tx {
   letter-spacing: .3em;
-  font-size: 18px;
-  /*IE9以前に対応する*/
-  font-size: 1.125rem;
-  line-height: 2em;
-  margin-bottom: 5em;
+  line-height: 25px;
 }
 
 .main .price-section .price-table {
   margin: 0 auto;
   color: #333333;
-  font-size: 1.1em;
   border-collapse: separate;
   border-spacing: 1px;
-  -webkit-box-shadow: 10px 10px #888;
-          box-shadow: 10px 10px #888;
-}
-
-.main .price-section .price-table th, .main .price-section .price-table td {
-  padding: 25px 70px;
 }
 
 .main .price-section .price-table th {
@@ -325,12 +369,6 @@ li {
 
 .main .price-section .price-table td {
   background: #FFF;
-}
-
-.main .price-section .price-table span {
-  font-size: 14px;
-  /*IE9以前に対応する*/
-  font-size: 0.875rem;
 }
 
 .main .about-section {
@@ -345,53 +383,40 @@ li {
 .main .about-section .about-heading .about-theme:before {
   content: 'プロフィール';
   position: absolute;
-  top: 70px;
-  left: 40%;
   letter-spacing: 0.2em;
   font-weight: bold;
   color: #333333;
-  font-size: 30px;
-  /*IE9以前に対応する*/
-  font-size: 1.875rem;
 }
 
 .main .about-section .about-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 600px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.main .about-section .about-content .profile-text {
-  margin-left: 230px;
-}
-
 .main .about-section .about-content .profile-text .pr-place {
   border-bottom: 1px solid #000;
   font-weight: 300;
-  margin-left: 25px;
+  margin-left: 30px;
   margin-bottom: 25px;
+  text-shadow: 3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
 }
 
 .main .about-section .about-content .profile-text .pr-tx {
-  margin: 45px 0;
-  font-size: 20px;
+  margin: 45px 30px 45px 0;
+  font-size: 16px;
   /*IE9以前に対応する*/
-  font-size: 1.25rem;
+  font-size: 1rem;
+  text-shadow: 3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
 }
 
 .main .profile-image > img {
-  width: 550px;
-  height: 550px;
+  width: 530px;
+  height: 530px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+  margin-left: 20px;
 }
 
 .main .pr-theme1 {
@@ -406,7 +431,7 @@ li {
   left: -275px;
   -webkit-transform: skewX(-52deg);
           transform: skewX(-52deg);
-  height: 88px;
+  height: 90px;
   width: 185px;
   border-left: 1px solid #707070;
   border-top: 1px solid #909090;
@@ -430,7 +455,7 @@ li {
   left: -245px;
   -webkit-transform: skewX(-52deg);
           transform: skewX(-52deg);
-  height: 73px;
+  height: 75px;
   width: 165px;
   border-left: 1px solid #707070;
   border-top: 1px solid #909090;
@@ -444,12 +469,12 @@ li {
 .main .pr-theme3:before {
   content: "";
   position: absolute;
-  top: 23px;
+  top: 10px;
   left: -245px;
   -webkit-transform: skew(40deg, -38deg);
           transform: skew(40deg, -38deg);
-  height: 84px;
-  width: 185px;
+  height: 85px;
+  width: 170px;
   border-left: 1px solid #909090;
   border-bottom: 1px solid #909090;
 }
@@ -462,7 +487,7 @@ li {
   content: 'お問い合わせ';
   position: absolute;
   top: 70px;
-  left: 37%;
+  left: 35%;
   letter-spacing: 0.2em;
   font-weight: bold;
   color: #333333;
@@ -540,7 +565,7 @@ li {
 }
 
 .footer .nav {
-  margin-left: 500px;
+  margin-left: 420px;
 }
 
 .footer .nav .nav__lists {
@@ -551,9 +576,9 @@ li {
 
 .footer .nav .nav__lists .nav__list > a {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 15px;
   /*IE9以前に対応する*/
-  font-size: 1rem;
+  font-size: 0.9375rem;
   margin-left: 50px;
 }
 
@@ -712,7 +737,7 @@ li {
     font-size: 16px;
     /*IE9以前に対応する*/
     font-size: 1rem;
-    padding: 0 5vw 0 10vw;
+    padding: 0 40px 0 10vw;
   }
   .main .ft-section .s-wrapper {
     height: 60vh;
@@ -727,22 +752,6 @@ li {
   .main .ft-section .ft-text2 {
     text-align: left;
     margin: 10px 25px 90px;
-  }
-  .section__end {
-    margin-bottom: 80px;
-    text-align: center;
-    position: relative;
-  }
-  .section__end:after {
-    content: '';
-    left: 165px;
-    top: 60px;
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-style: solid;
-    border-width: 30px 20px 0 20px;
-    border-color: #ffffff transparent transparent transparent;
   }
   .th-wrapper {
     color: #dcdcdc;
@@ -764,7 +773,7 @@ li {
     content: 'サービス';
     position: absolute;
     top: 45px;
-    left: 50px;
+    left: 20%;
     letter-spacing: 0.2em;
     font-weight: bold;
     color: #333;
@@ -798,7 +807,7 @@ li {
     margin-bottom: 10vh;
   }
   .ser-menus .ser-content {
-    width: 335px;
+    width: 86%;
     margin: 0 auto 20px;
   }
   .ser-menus .image > p {
@@ -807,9 +816,9 @@ li {
     font-size: 1.25rem;
   }
   .ser-menus .text-content {
-    font-size: 13px;
+    font-size: 12px;
     /*IE9以前に対応する*/
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     padding: 6px;
   }
   .ser-menus .text-content .topic {
@@ -827,7 +836,7 @@ li {
   }
   .works-section .work-heading .work-theme:before {
     top: 45px;
-    left: 75px;
+    left: 22%;
     font-size: 26px;
     /*IE9以前に対応する*/
     font-size: 1.625rem;
@@ -857,6 +866,56 @@ li {
   }
   .works-section #button {
     display: none;
+  }
+  .price-section {
+    padding: 95px 0 50px;
+  }
+  .price-section .price-heading .price-theme:before {
+    top: 40px;
+    left: 25%;
+    font-size: 26px;
+    /*IE9以前に対応する*/
+    font-size: 1.625rem;
+  }
+  .price-section .price-heading .price-theme:after {
+    top: 23px;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  .price-section .price-tx {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+    margin-bottom: 4em;
+    text-align: center;
+  }
+  .price-section .price-tx .p-tx1 {
+    margin-bottom: 25px;
+  }
+  .price-section .price-tx .p-tx2 {
+    padding: 0 10px;
+  }
+  .price-section .price-table {
+    text-align: center;
+  }
+  .price-section .price-table th {
+    font-size: 0.7em;
+    padding: 30px 0;
+  }
+  .price-section .price-table td {
+    font-size: 0.55em;
+    padding: 15px 10px;
+  }
+  .price-section .price-table span {
+    font-size: 6px;
+  }
+  .about-section .about-heading .about-theme:before {
+    top: 40px;
+    left: 20%;
+    font-size: 22px;
+    /*IE9以前に対応する*/
+    font-size: 1.375rem;
   }
 }
 
@@ -913,63 +972,6 @@ li {
   .section__inner {
     padding: 0 80px 0 140px;
   }
-  .section__end {
-    text-align: center;
-  }
-  .section__end a {
-    margin-top: 100px;
-    position: relative;
-    color: #fff;
-    z-index: 2;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-decoration: none;
-  }
-  .section__end a span {
-    position: absolute;
-    top: -70px;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-animation: sdb 1.5s infinite;
-    animation: sdb 1.5s infinite;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  @-webkit-keyframes sdb {
-    0% {
-      -webkit-transform: rotate(-45deg) translate(0, 0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-      opacity: 0;
-    }
-  }
-  @keyframes sdb {
-    0% {
-      -webkit-transform: rotate(-45deg) translate(0, 0);
-              transform: rotate(-45deg) translate(0, 0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-              transform: rotate(-45deg) translate(-20px, 20px);
-      opacity: 0;
-    }
-  }
   .ser-heading {
     text-align: center;
   }
@@ -980,13 +982,13 @@ li {
     content: 'サービス';
     position: absolute;
     top: 70px;
-    left: 37%;
+    left: 35%;
     letter-spacing: 0.2em;
     font-weight: bold;
     color: #333;
-    font-size: 30px;
+    font-size: 31px;
     /*IE9以前に対応する*/
-    font-size: 1.875rem;
+    font-size: 1.9375rem;
   }
   .ser-heading .ser-text {
     font-size: 23px;
@@ -1030,9 +1032,9 @@ li {
     text-align: center;
   }
   .ser-menus .ser-content .image p {
-    font-size: 23px;
+    font-size: 20px;
     /*IE9以前に対応する*/
-    font-size: 1.4375rem;
+    font-size: 1.25rem;
     margin: 1.5em 0;
     letter-spacing: 0.2em;
   }
@@ -1043,9 +1045,9 @@ li {
     background-color: #738851;
     height: 8em;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 13px;
     /*IE9以前に対応する*/
-    font-size: 1rem;
+    font-size: 0.8125rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1057,9 +1059,9 @@ li {
             align-items: center;
   }
   .ser-menus .ser-content .text-content .topic {
-    font-size: 15px;
+    font-size: 14px;
     /*IE9以前に対応する*/
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     margin-bottom: 8px;
   }
   .works-section {
@@ -1069,7 +1071,7 @@ li {
   }
   .works-section .work-heading .work-theme:before {
     top: 70px;
-    left: 40%;
+    left: 38%;
     font-size: 30px;
     /*IE9以前に対応する*/
     font-size: 1.875rem;
@@ -1104,6 +1106,65 @@ li {
     position: absolute;
     top: 230px;
     right: 20px;
+  }
+  .price-section {
+    padding: 95px 0 115px;
+  }
+  .price-section .price-heading .price-theme:before {
+    top: 70px;
+    left: 40%;
+    font-size: 32px;
+    /*IE9以前に対応する*/
+    font-size: 2rem;
+  }
+  .price-section .price-heading .price-theme:after {
+    top: 38px;
+    margin-left: 8px;
+    width: 60px;
+    height: 60px;
+  }
+  .price-section .price-tx {
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+    margin-bottom: 5em;
+    text-align: center;
+  }
+  .price-section .price-tx .p-tx1 {
+    margin-bottom: 10px;
+  }
+  .price-section .price-table {
+    font-size: 1.1em;
+    text-align: center;
+    -webkit-box-shadow: 10px 10px #888;
+            box-shadow: 10px 10px #888;
+  }
+  .price-section .price-table th, .price-section .price-table td {
+    padding: 25px 70px;
+  }
+  .price-section .price-table span {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+  }
+  .about-section .about-heading .about-theme:before {
+    top: 70px;
+    left: 38%;
+    font-size: 30px;
+    /*IE9以前に対応する*/
+    font-size: 1.875rem;
+  }
+  .about-section .about-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 600px;
+  }
+  .about-section .about-content .profile-text {
+    margin-left: 230px;
   }
 }
 /*# sourceMappingURL=style.css.map */
