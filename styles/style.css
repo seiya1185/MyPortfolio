@@ -373,7 +373,6 @@ li {
 
 .main .about-section {
   background-image: repeating-linear-gradient(45deg, #e8e8e8, #e8e8e8 5px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10px);
-  padding: 1px 0 110px;
 }
 
 .main .about-section .about-heading {
@@ -397,86 +396,17 @@ li {
 .main .about-section .about-content .profile-text .pr-place {
   border-bottom: 1px solid #000;
   font-weight: 300;
-  margin-left: 30px;
-  margin-bottom: 25px;
   text-shadow: 3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
 }
 
 .main .about-section .about-content .profile-text .pr-tx {
-  margin: 45px 30px 45px 0;
-  font-size: 16px;
-  /*IE9以前に対応する*/
-  font-size: 1rem;
   text-shadow: 3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
 }
 
 .main .profile-image > img {
-  width: 530px;
-  height: 530px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  margin-left: 20px;
-}
-
-.main .pr-theme1 {
-  width: 435px;
-  position: relative;
-}
-
-.main .pr-theme1:before {
-  content: "";
-  position: absolute;
-  top: 22px;
-  left: -275px;
-  -webkit-transform: skewX(-52deg);
-          transform: skewX(-52deg);
-  height: 90px;
-  width: 185px;
-  border-left: 1px solid #707070;
-  border-top: 1px solid #909090;
-}
-
-.main .pr-theme1 span {
-  font-size: 20px;
-  /*IE9以前に対応する*/
-  font-size: 1.25rem;
-}
-
-.main .pr-theme2 {
-  width: 210px;
-  position: relative;
-}
-
-.main .pr-theme2:before {
-  content: "";
-  position: absolute;
-  top: 22px;
-  left: -245px;
-  -webkit-transform: skewX(-52deg);
-          transform: skewX(-52deg);
-  height: 75px;
-  width: 165px;
-  border-left: 1px solid #707070;
-  border-top: 1px solid #909090;
-}
-
-.main .pr-theme3 {
-  width: 510px;
-  position: relative;
-}
-
-.main .pr-theme3:before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: -245px;
-  -webkit-transform: skew(40deg, -38deg);
-          transform: skew(40deg, -38deg);
-  height: 85px;
-  width: 170px;
-  border-left: 1px solid #909090;
-  border-bottom: 1px solid #909090;
 }
 
 .main .message-section .message-heading {
@@ -737,11 +667,11 @@ li {
     font-size: 16px;
     /*IE9以前に対応する*/
     font-size: 1rem;
-    padding: 0 40px 0 10vw;
+    padding: 0 30px 0 50px;
   }
   .main .ft-section .s-wrapper {
-    height: 60vh;
-    width: 330px;
+    height: 65vh;
+    width: 90%;
   }
   .main .ft-section .ft-text, .main .ft-section .ft-text2 {
     font-size: 19px;
@@ -785,7 +715,7 @@ li {
     font-size: 16px;
     /*IE9以前に対応する*/
     font-size: 1rem;
-    margin: 0 20px 14vh;
+    margin: 0 20px 12vh;
     position: relative;
   }
   .ser-heading .ser-text:before {
@@ -901,14 +831,18 @@ li {
   }
   .price-section .price-table th {
     font-size: 0.7em;
-    padding: 30px 0;
+    padding: 25px 0;
   }
   .price-section .price-table td {
-    font-size: 0.55em;
-    padding: 15px 10px;
+    font-size: 0.4em;
+    padding: 20px 4px;
+    white-space: nowrap;
   }
   .price-section .price-table span {
-    font-size: 6px;
+    font-size: 5px;
+  }
+  .about-section {
+    padding: 1px 0 50px;
   }
   .about-section .about-heading .about-theme:before {
     top: 40px;
@@ -916,6 +850,37 @@ li {
     font-size: 22px;
     /*IE9以前に対応する*/
     font-size: 1.375rem;
+  }
+  .about-section .about-content .profile-text {
+    padding: 0 25px;
+  }
+  .about-section .about-content .profile-text .pr-theme1, .about-section .about-content .profile-text .pr-theme2, .about-section .about-content .profile-text .pr-theme3 {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+  }
+  .about-section .about-content .profile-text .pr-theme1 > span, .about-section .about-content .profile-text .pr-theme2 > span, .about-section .about-content .profile-text .pr-theme3 > span {
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
+  }
+  .about-section .about-content .profile-text .pr-place {
+    margin-bottom: 30px;
+  }
+  .about-section .about-content .profile-text .pr-tx {
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
+    margin-bottom: 50px;
+  }
+  .profile-image {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .profile-image > img {
+    width: 330px;
+    height: 330px;
+    text-align: center;
   }
 }
 
@@ -1147,6 +1112,9 @@ li {
     /*IE9以前に対応する*/
     font-size: 0.875rem;
   }
+  .about-section {
+    padding: 1px 0 110px;
+  }
   .about-section .about-heading .about-theme:before {
     top: 70px;
     left: 38%;
@@ -1165,6 +1133,74 @@ li {
   }
   .about-section .about-content .profile-text {
     margin-left: 230px;
+  }
+  .about-section .about-content .profile-text .pr-place {
+    margin-left: 30px;
+    margin-bottom: 25px;
+  }
+  .about-section .about-content .profile-text .pr-tx {
+    margin: 45px 30px 45px 0;
+    font-size: 16px;
+    /*IE9以前に対応する*/
+    font-size: 1rem;
+  }
+  .profile-image > img {
+    width: 530px;
+    height: 530px;
+    margin-left: 20px;
+  }
+  .pr-theme1 {
+    width: 435px;
+    position: relative;
+  }
+  .pr-theme1:before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: -275px;
+    -webkit-transform: skewX(-52deg);
+            transform: skewX(-52deg);
+    height: 90px;
+    width: 185px;
+    border-left: 1px solid #707070;
+    border-top: 1px solid #909090;
+  }
+  .pr-theme1 span {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+  }
+  .pr-theme2 {
+    width: 210px;
+    position: relative;
+  }
+  .pr-theme2:before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: -245px;
+    -webkit-transform: skewX(-52deg);
+            transform: skewX(-52deg);
+    height: 75px;
+    width: 165px;
+    border-left: 1px solid #707070;
+    border-top: 1px solid #909090;
+  }
+  .pr-theme3 {
+    width: 510px;
+    position: relative;
+  }
+  .pr-theme3:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -245px;
+    -webkit-transform: skew(40deg, -38deg);
+            transform: skew(40deg, -38deg);
+    height: 85px;
+    width: 170px;
+    border-left: 1px solid #909090;
+    border-bottom: 1px solid #909090;
   }
 }
 /*# sourceMappingURL=style.css.map */

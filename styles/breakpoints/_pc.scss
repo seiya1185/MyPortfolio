@@ -212,6 +212,7 @@
 }
 
 .about-section {
+    padding: 1px 0 110px;
     .about-heading {
         .about-theme {
             &:before {
@@ -227,9 +228,77 @@
         height: 600px;
         .profile-text {
             margin-left: 230px;
+            .pr-place {
+                margin-left: 30px;
+                margin-bottom: 25px;
+            }
+            .pr-tx {
+                margin: 45px 30px 45px 0;
+                @include rem(16);
+            }
         }
     }
 }
+
+// プロフィール画像部分
+.profile-image > img {
+    width: 530px;
+    height: 530px;
+    margin-left: 20px;
+}
+
+// -----画像から出る線部分-----
+.pr-theme1 {
+    width: 435px;
+    position: relative;
+    &:before {
+        content:"";
+        position: absolute;
+        top: 22px;
+        left: -275px;
+        transform: skewX(-52deg);
+        height: 90px;
+        width: 185px;
+        border-left: 1px solid #707070;
+        border-top: 1px solid #909090;
+    }
+    span {
+        @include rem(20);
+    }
+}
+
+.pr-theme2 {
+    width: 210px;
+    position: relative;
+    &:before {
+        content:"";
+        position: absolute;
+        top: 22px;
+        left: -245px;
+        transform: skewX(-52deg);
+        height: 75px;
+        width: 165px;
+        border-left: 1px solid #707070;
+        border-top: 1px solid #909090;
+    }
+}
+
+.pr-theme3 {
+    width: 510px;
+    position: relative;
+    &:before {
+        content:"";
+        position: absolute;
+        top: 10px;
+        left: -245px;
+        transform: skew(40deg,-38deg);
+        height: 85px;
+        width: 170px;
+        border-left: 1px solid #909090;
+        border-bottom: 1px solid #909090;
+    }
+}
+  // -----画像から出る線部分終わり-----
 
 
 

@@ -139,11 +139,11 @@
     }
     .section__inner {
       @include rem(16);
-      padding: 0 40px 0 10vw;
+      padding: 0 30px 0 50px;
     }
     .s-wrapper {
-      height: 60vh;
-      width: 330px;
+      height: 65vh;
+      width: 90%;
     }
     .ft-text, .ft-text2 {
       @include rem(19);
@@ -185,7 +185,7 @@
 
   .ser-text {
       @include rem(16);
-      margin: 0 20px 14vh;
+      margin: 0 20px 12vh;
       position: relative;
     // 文章下、線の装飾
       &:before {
@@ -296,19 +296,21 @@
     text-align: center;
     th {
       font-size: 0.7em;
-      padding: 30px 0;
+      padding: 25px 0;
     }
     td {
-      font-size: 0.55em;
-      padding: 15px 10px;
+      font-size: 0.4em;
+      padding: 20px 4px;
+      white-space: nowrap;
     }
     span {
-      font-size: 6px;
+      font-size: 5px;
     }
   }
 }
 
 .about-section {
+  padding: 1px 0 50px;
   .about-heading {
       .about-theme {
           &:before {
@@ -317,5 +319,34 @@
               @include rem(22);
           }
       }
+  }
+  .about-content {
+    .profile-text {
+      padding: 0 25px;
+      .pr-theme1, .pr-theme2, .pr-theme3 {
+        @include rem(20);
+        > span {
+          @include rem(15);
+        }
+      }
+      .pr-place {
+        margin-bottom: 30px;
+      }
+      .pr-tx {
+        @include rem(15);
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+// プロフィール画像部分
+.profile-image {
+  text-align: center;
+  margin-bottom: 60px;
+  > img {
+    width: 330px;
+    height: 330px;
+    text-align: center;
   }
 }
