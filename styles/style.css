@@ -873,6 +873,9 @@ li {
     font-size: 0.9375rem;
     margin-bottom: 50px;
   }
+  .about-section .about-content .profile-text .pr-tx .pr-tx3 br {
+    display: none;
+  }
   .profile-image {
     text-align: center;
     margin-bottom: 60px;

@@ -335,6 +335,9 @@
       .pr-tx {
         @include rem(15);
         margin-bottom: 50px;
+        .pr-tx3 br {
+          display: none;
+        }
       }
     }
   }
