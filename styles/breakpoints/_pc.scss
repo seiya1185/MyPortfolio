@@ -210,6 +210,97 @@
         }
     }
 }
+// ----- 価格のセクションはここまで -----
+
+
+// ----- 制作の流れの部分 ------
+
+.making-order {
+    .making-heading {
+        height: 10vh;
+        line-height: 10vh;
+        font-weight: 100;
+    }
+    .making-content {
+        .making-parts {
+            padding: 80px;
+            .making-part {
+                height: 200px;
+                max-width: 570px;
+                padding: 35px 20px 0 110px;
+                margin: 0 auto 30px;
+                > h3 {
+                    margin-bottom: 20px;
+                }
+                > p {
+                    @include rem(15);
+                }
+            }
+        }
+    }
+}
+
+.adjust1 {
+    > h3 {
+        margin-left: 15px;
+        &:before {
+            top: 20px;
+            left: 55px;
+            width: 65px;
+            height: 65px;
+        }
+    }
+}
+
+.adjust2 {
+    > h3 {
+        margin-left: 15px;
+        &:before {
+            top: 20px;
+            left: 60px;
+            width: 65px;
+            height: 65px;
+        }
+    }
+}
+
+.adjust3 {
+    > h3 {
+        margin-left: 15px;
+        &:before {
+            top: 20px;
+            left: 57px;
+            width: 65px;
+            height: 65px;
+        }
+    }
+}
+
+.adjust4 {
+    > h3 {
+        margin-left: 15px;
+        &:before {
+            top: 20px;
+            left: 61px;
+            width: 65px;
+            height: 65px;
+        }
+    }
+}
+
+.adjust5 {
+    > h3 {
+        margin-left: 15px;
+        &:before {
+            top: 20px;
+            left: 55px;
+            width: 65px;
+            height: 65px;
+        }
+    }
+}
+
+// ----- 制作の流れここまで ------
 
 .about-section {
     padding: 1px 0 110px;

@@ -106,6 +106,7 @@ li {
         @include rem(53);
         margin: 40px 0 50px;
         letter-spacing: normal;
+        text-shadow:  3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
       }
       .fv-tx {
         @include rem(13);
@@ -373,6 +374,103 @@ li {
   }
 }
 
+// ------ 制作手順の装飾 ------
+.making-order {
+  .making-heading {
+    text-align: center;
+    color: $color-white;
+    background-color: #738851;
+  }
+  .making-content {
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../img/common/sanmon.jpeg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100%;
+    .making-parts {
+      .making-part {
+        background-image: url("../img/common/frame.png");
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+// -- 番号の画像 & 細かい調整 --
+.adjust1 {
+  position: relative;
+  > h3 {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    &:before {
+      position: absolute;
+      content: '';
+      background: url("../img/common/one.png") no-repeat;
+      display: inline-block;
+      background-size: contain;
+    }
+  }
+}
+.adjust2 {
+  position: relative;
+  > h3 {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    &:before {
+      position: absolute;
+      content: '';
+      background: url("../img/common/two.png") no-repeat;
+      display: inline-block;
+      background-size: contain;
+    }
+  }
+}
+.adjust3 {
+  position: relative;
+  > h3 {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    &:before {
+      position: absolute;
+      content: '';
+      background: url("../img/common/three.png") no-repeat;
+      display: inline-block;
+      background-size: contain;
+    }
+  }
+}
+.adjust4 {
+  position: relative;
+  > h3 {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    &:before {
+      position: absolute;
+      content: '';
+      background: url("../img/common/four.png") no-repeat;
+      display: inline-block;
+      background-size: contain;
+    }
+  }
+}
+.adjust5 {
+  position: relative;
+  > h3 {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    &:before {
+      position: absolute;
+      content: '';
+      background: url("../img/common/five.png") no-repeat;
+      display: inline-block;
+      background-size: contain;
+    }
+  }
+}
+
+// ------ 制作手順の装飾 ------
+
   .about-section {
     background-image: repeating-linear-gradient(
     45deg,
@@ -510,7 +608,7 @@ li {
       .nav__list > a {
         color: $color-white;
         @include rem(15);
-        margin-left: 50px;
+        margin-left: 45px;
       }
     }
   }

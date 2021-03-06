@@ -67,6 +67,7 @@ li {
   font-size: 3.3125rem;
   margin: 40px 0 50px;
   letter-spacing: normal;
+  text-shadow: 3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
 }
 
 .main .fv .texts .fv-tx {
@@ -371,6 +372,112 @@ li {
   background: #FFF;
 }
 
+.main .making-order .making-heading {
+  text-align: center;
+  color: #ffffff;
+  background-color: #738851;
+}
+
+.main .making-order .making-content {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/common/sanmon.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/common/sanmon.jpeg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.main .making-order .making-content .making-parts .making-part {
+  background-image: url("../img/common/frame.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.main .adjust1 {
+  position: relative;
+}
+
+.main .adjust1 > h3 {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+}
+
+.main .adjust1 > h3:before {
+  position: absolute;
+  content: '';
+  background: url("../img/common/one.png") no-repeat;
+  display: inline-block;
+  background-size: contain;
+}
+
+.main .adjust2 {
+  position: relative;
+}
+
+.main .adjust2 > h3 {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+}
+
+.main .adjust2 > h3:before {
+  position: absolute;
+  content: '';
+  background: url("../img/common/two.png") no-repeat;
+  display: inline-block;
+  background-size: contain;
+}
+
+.main .adjust3 {
+  position: relative;
+}
+
+.main .adjust3 > h3 {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+}
+
+.main .adjust3 > h3:before {
+  position: absolute;
+  content: '';
+  background: url("../img/common/three.png") no-repeat;
+  display: inline-block;
+  background-size: contain;
+}
+
+.main .adjust4 {
+  position: relative;
+}
+
+.main .adjust4 > h3 {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+}
+
+.main .adjust4 > h3:before {
+  position: absolute;
+  content: '';
+  background: url("../img/common/four.png") no-repeat;
+  display: inline-block;
+  background-size: contain;
+}
+
+.main .adjust5 {
+  position: relative;
+}
+
+.main .adjust5 > h3 {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+}
+
+.main .adjust5 > h3:before {
+  position: absolute;
+  content: '';
+  background: url("../img/common/five.png") no-repeat;
+  display: inline-block;
+  background-size: contain;
+}
+
 .main .about-section {
   background-image: repeating-linear-gradient(45deg, #e8e8e8, #e8e8e8 5px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10px);
 }
@@ -509,7 +616,7 @@ li {
   font-size: 15px;
   /*IE9以前に対応する*/
   font-size: 0.9375rem;
-  margin-left: 50px;
+  margin-left: 45px;
 }
 
 .icon-color {
@@ -841,8 +948,81 @@ li {
   .price-section .price-table span {
     font-size: 5px;
   }
+  .making-order .making-heading {
+    height: 7vh;
+    line-height: 7vh;
+    font-weight: lighter;
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+  }
+  .making-order .making-content .making-parts {
+    padding: 50px 0 30px;
+  }
+  .making-order .making-content .making-parts .making-part {
+    height: 135px;
+    width: 365px;
+    padding: 20px 15px 0 50px;
+    margin: 0 auto 10px;
+  }
+  .making-order .making-content .making-parts .making-part > h3 {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+  }
+  .making-order .making-content .making-parts .making-part > p {
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+  }
+  .adjust1 > h3 {
+    margin-left: 30px;
+  }
+  .adjust1 > h3:before {
+    top: 17px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+  }
+  .adjust2 > h3 {
+    margin-left: 30px;
+  }
+  .adjust2 > h3:before {
+    top: 17px;
+    left: 42px;
+    width: 40px;
+    height: 40px;
+  }
+  .adjust3 > h3 {
+    margin-left: 30px;
+  }
+  .adjust3 > h3:before {
+    top: 17px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+  }
+  .adjust4 > h3 {
+    margin-left: 30px;
+  }
+  .adjust4 > h3:before {
+    top: 17px;
+    left: 42px;
+    width: 40px;
+    height: 40px;
+  }
+  .adjust5 > h3 {
+    margin-left: 30px;
+  }
+  .adjust5 > h3:before {
+    top: 17px;
+    left: 38px;
+    width: 40px;
+    height: 40px;
+  }
   .about-section {
-    padding: 1px 0 50px;
+    padding: 1px 0 30px;
   }
   .about-section .about-heading .about-theme:before {
     top: 40px;
@@ -872,6 +1052,9 @@ li {
     /*IE9以前に対応する*/
     font-size: 0.9375rem;
     margin-bottom: 50px;
+  }
+  .about-section .about-content .profile-text .pr-tx .pr-tx1 br {
+    display: none;
   }
   .about-section .about-content .profile-text .pr-tx .pr-tx3 br {
     display: none;
@@ -1114,6 +1297,73 @@ li {
     font-size: 14px;
     /*IE9以前に対応する*/
     font-size: 0.875rem;
+  }
+  .making-order .making-heading {
+    height: 10vh;
+    line-height: 10vh;
+    font-weight: 100;
+  }
+  .making-order .making-content .making-parts {
+    padding: 80px;
+  }
+  .making-order .making-content .making-parts .making-part {
+    height: 200px;
+    max-width: 570px;
+    padding: 35px 20px 0 110px;
+    margin: 0 auto 30px;
+  }
+  .making-order .making-content .making-parts .making-part > h3 {
+    margin-bottom: 20px;
+  }
+  .making-order .making-content .making-parts .making-part > p {
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
+  }
+  .adjust1 > h3 {
+    margin-left: 15px;
+  }
+  .adjust1 > h3:before {
+    top: 20px;
+    left: 55px;
+    width: 65px;
+    height: 65px;
+  }
+  .adjust2 > h3 {
+    margin-left: 15px;
+  }
+  .adjust2 > h3:before {
+    top: 20px;
+    left: 60px;
+    width: 65px;
+    height: 65px;
+  }
+  .adjust3 > h3 {
+    margin-left: 15px;
+  }
+  .adjust3 > h3:before {
+    top: 20px;
+    left: 57px;
+    width: 65px;
+    height: 65px;
+  }
+  .adjust4 > h3 {
+    margin-left: 15px;
+  }
+  .adjust4 > h3:before {
+    top: 20px;
+    left: 61px;
+    width: 65px;
+    height: 65px;
+  }
+  .adjust5 > h3 {
+    margin-left: 15px;
+  }
+  .adjust5 > h3:before {
+    top: 20px;
+    left: 55px;
+    width: 65px;
+    height: 65px;
   }
   .about-section {
     padding: 1px 0 110px;

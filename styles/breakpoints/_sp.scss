@@ -309,8 +309,98 @@
   }
 }
 
+// ----- 制作手順 -----
+.making-order {
+  .making-heading {
+      height: 7vh;
+      line-height: 7vh;
+      font-weight: lighter;
+      @include rem(14);
+  }
+  .making-content {
+      .making-parts {
+        padding: 50px 0 30px;
+          .making-part {
+            height: 135px;
+            width: 365px;
+            padding: 20px 15px 0 50px;
+            margin: 0 auto 10px;
+            > h3 {
+              @include rem(14);
+              margin-bottom: 10px;
+            }
+            > p {
+              @include rem(10);
+            }
+          }
+      }
+  }
+}
+
+.adjust1 {
+  > h3 {
+      margin-left: 30px;
+      &:before {
+        top: 17px;
+        left: 40px;
+        width: 40px;
+        height: 40px;
+      }
+  }
+}
+
+.adjust2 {
+  > h3 {
+      margin-left: 30px;
+      &:before {
+        top: 17px;
+        left: 42px;
+        width: 40px;
+        height: 40px;
+      }
+  }
+}
+
+.adjust3 {
+  > h3 {
+      margin-left: 30px;
+      &:before {
+        top: 17px;
+        left: 40px;
+        width: 40px;
+        height: 40px;
+      }
+  }
+}
+
+.adjust4 {
+  > h3 {
+      margin-left: 30px;
+      &:before {
+        top: 17px;
+        left: 42px;
+        width: 40px;
+        height: 40px;
+      }
+  }
+}
+
+.adjust5 {
+  > h3 {
+      margin-left: 30px;
+      &:before {
+        top: 17px;
+        left: 38px;
+        width: 40px;
+        height: 40px;
+      }
+  }
+}
+
+// ----- 制作手順ここまで -----
+
 .about-section {
-  padding: 1px 0 50px;
+  padding: 1px 0 30px;
   .about-heading {
       .about-theme {
           &:before {
@@ -335,6 +425,9 @@
       .pr-tx {
         @include rem(15);
         margin-bottom: 50px;
+        .pr-tx1 br {
+          display: none;
+        }
         .pr-tx3 br {
           display: none;
         }
