@@ -523,36 +523,22 @@ li {
 .main .message-section .message-heading .message-theme:before {
   content: 'お問い合わせ';
   position: absolute;
-  top: 70px;
-  left: 35%;
   letter-spacing: 0.2em;
   font-weight: bold;
   color: #333333;
-  font-size: 30px;
-  /*IE9以前に対応する*/
-  font-size: 1.875rem;
 }
 
 .main form div {
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto 25px;
 }
 
 .main form div span {
   border: 1px #932E40 solid;
   background-color: #932E40;
   color: #ffffff;
-  font-size: 14px;
-  /*IE9以前に対応する*/
-  font-size: 0.875rem;
-  padding: 0 5px;
-  margin-left: 10px;
 }
 
 .main label {
-  margin-left: 5px;
-  margin-bottom: 15px;
   display: block;
 }
 
@@ -563,22 +549,13 @@ li {
   border: 1px #333333 solid;
   padding: 10px;
   width: 100%;
-  max-width: 600px;
-}
-
-.main textarea {
-  height: 300px;
 }
 
 .main input[type="submit"] {
-  margin: 15px 0 70px 210px;
   background-color: #932E40;
   padding: 15px 28px;
   border-radius: 30px;
   color: #ffffff;
-  font-size: 18px;
-  /*IE9以前に対応する*/
-  font-size: 1.125rem;
 }
 
 .footer {
@@ -1068,6 +1045,47 @@ li {
     height: 330px;
     text-align: center;
   }
+  .message-section .message-heading .message-theme:before {
+    top: 40px;
+    left: 10%;
+    font-size: 24px;
+    /*IE9以前に対応する*/
+    font-size: 1.5rem;
+  }
+  form div {
+    max-width: 330px;
+    margin: 0 auto 25px;
+  }
+  form div span {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+    padding: 0 5px;
+    margin-left: 10px;
+  }
+  label {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  input[type="name"],
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    max-width: 330px;
+  }
+  textarea {
+    height: 300px;
+  }
+  input[type="submit"] {
+    display: block;
+    margin: 35px auto 100px;
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
+  .footer .nav {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1080px) {
@@ -1454,6 +1472,39 @@ li {
     width: 170px;
     border-left: 1px solid #909090;
     border-bottom: 1px solid #909090;
+  }
+  .message-section .message-heading .message-theme:before {
+    top: 70px;
+    left: 35%;
+    font-size: 30px;
+    /*IE9以前に対応する*/
+    font-size: 1.875rem;
+  }
+  form div {
+    max-width: 600px;
+    margin: 0 auto 25px;
+  }
+  form div span {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+    padding: 0 5px;
+    margin-left: 10px;
+  }
+  input[type="name"],
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    max-width: 600px;
+  }
+  textarea {
+    height: 300px;
+  }
+  input[type="submit"] {
+    margin: 15px 0 70px 210px;
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

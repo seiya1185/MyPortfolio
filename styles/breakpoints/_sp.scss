@@ -446,3 +446,63 @@
     text-align: center;
   }
 }
+
+
+// ----- メッセージ部分の装飾 -----
+
+.message-section {
+  .message-heading {
+      .message-theme {
+          &:before {
+              top: 40px;
+              left: 10%;
+              @include rem(24);
+          }
+      }
+  }
+}
+
+// フォームの装飾
+form div {
+  max-width: 330px;
+  margin: 0 auto 25px;
+}
+
+form div span {
+  @include rem(14);
+  padding: 0 5px;
+  margin-left: 10px;
+}
+
+label {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="name"],
+input[type="email"],
+input[type="text"],
+textarea {
+  max-width: 330px;
+}
+
+textarea {
+  height: 300px;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 35px auto 100px;
+  @include rem(18);
+}
+
+
+// ここからフッターのデザイン -----------
+
+.footer {
+  .nav {
+    display: none;
+  }
+}
+
+

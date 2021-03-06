@@ -522,12 +522,9 @@ li {
         &:before {
           content: 'お問い合わせ';
           position: absolute;
-          top: 70px;
-          left: 35%;
           letter-spacing: 0.2em;
           font-weight: bold;
           color: $color-black;
-          @include rem(30);
         }
       }
     }
@@ -537,22 +534,15 @@ li {
 
   form div {
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto 25px;
   }
 
   form div span {
     border: 1px #932E40 solid;
     background-color: #932E40;
     color: $color-white;
-    @include rem(14);
-    padding: 0 5px ;
-    margin-left: 10px;
   }
 
   label {
-    margin-left: 5px;
-    margin-bottom: 15px;
     display: block;
   }
 
@@ -563,31 +553,23 @@ li {
     border: 1px $color-black solid;
     padding: 10px;
     width: 100%;
-    max-width: 600px;
   }
 
-  textarea {
-    height: 300px;
-  }
 
   input[type="submit"] {
-    margin: 15px 0 70px 210px;
     background-color: #932E40;
     padding: 15px 28px;
     border-radius: 30px;
     color: $color-white;
-    @include rem(18);
   }
 
   // --- ここまでフォームの装飾 ---
 
   // --- ここまでお問い合わせのフォームのデザイン ---
 
-  // --- ここからフッターのデザイン ---
-
 }
 
-
+// ----- ここからフッター -----
 
 .footer {
   background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../img/pc/footer-image.jpg");
@@ -625,11 +607,3 @@ li {
 // -- アイコン色・配置ここまで --
 
 // --- ここまでフッターのデザイン ---
-
-//*------------------*
-//*  section
-//*------------------*
-
-//*------------------*
-//*  footer
-//*------------------*

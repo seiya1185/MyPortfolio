@@ -391,6 +391,49 @@
 }
   // -----画像から出る線部分終わり-----
 
+  // ----- メッセージ部分の装飾 -----
+
+.message-section {
+    .message-heading {
+        .message-theme {
+            &:before {
+                top: 70px;
+                left: 35%;
+                @include rem(30);
+            }
+        }
+    }
+}
+
+// フォームの装飾
+form div {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+form div span {
+    @include rem(14);
+    padding: 0 5px ;
+    margin-left: 10px;
+}
+
+input[type="name"],
+input[type="email"],
+input[type="text"],
+textarea {
+    max-width: 600px;
+}
+
+textarea {
+    height: 300px;
+}
+
+input[type="submit"] {
+    margin: 15px 0 70px 210px;
+    @include rem(18);
+}
+
+  // ----- メッセージ部分の装飾ここまで -----
 
 
 
