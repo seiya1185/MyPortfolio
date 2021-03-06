@@ -417,6 +417,11 @@ form div span {
     margin-left: 10px;
 }
 
+label {
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
 input[type="name"],
 input[type="email"],
 input[type="text"],
@@ -429,7 +434,8 @@ textarea {
 }
 
 input[type="submit"] {
-    margin: 15px 0 70px 210px;
+    display: block;
+    margin: 15px auto 70px;
     @include rem(18);
 }
 

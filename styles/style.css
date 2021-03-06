@@ -1491,6 +1491,10 @@ li {
     padding: 0 5px;
     margin-left: 10px;
   }
+  label {
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
   input[type="name"],
   input[type="email"],
   input[type="text"],
@@ -1501,7 +1505,8 @@ li {
     height: 300px;
   }
   input[type="submit"] {
-    margin: 15px 0 70px 210px;
+    display: block;
+    margin: 15px auto 70px;
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
