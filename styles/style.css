@@ -46,6 +46,15 @@ li {
           align-items: center;
 }
 
+.main {
+  /*==================================================
+スライダーのためのcss
+===================================*/
+  /*矢印の設定*/
+  /*戻る、次へ矢印の位置*/
+  /*ドットナビゲーションの設定*/
+}
+
 .main .fv {
   background-image: url("../img/pc/fv-image.jpg");
   background-position: center;
@@ -305,7 +314,7 @@ li {
   background-position: center;
   background-size: cover;
   text-align: center;
-  padding: 1px 0 110px;
+  padding: 1px 0 80px;
 }
 
 .main .works-section .work-heading .work-theme:before {
@@ -316,8 +325,81 @@ li {
   color: #333;
 }
 
-.main .works-section .slide-wrapper {
+.main .slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
   margin: 0 auto;
+}
+
+.main .slider .slick-slide {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  /*左右の画像のサイズを80%に*/
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  /*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;
+  /*透過50%*/
+}
+
+.main .slider .slick-slide.slick-center {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  /*中央の画像のサイズだけ等倍に*/
+  opacity: 1;
+  /*透過なし*/
+}
+
+.main .slick-prev,
+.main .slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;
+  /*矢印の色*/
+  border-right: 2px solid #666;
+  /*矢印の色*/
+}
+
+.main .slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -1.5%;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.main .slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -1.5%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.main .slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.main .slick-dots li {
+  display: inline-block;
+}
+
+.main .slick-dots button {
+  color: transparent;
+  outline: none;
+  display: block;
+  border-radius: 50%;
+  background: #ccc;
+  /*ドットボタンの色*/
+}
+
+.main .slick-dots .slick-active button {
+  background: #333;
+  /*ドットボタンの現在地表示の色*/
 }
 
 .main .price-section {
@@ -842,7 +924,7 @@ li {
   }
   .works-section {
     background-image: url("../img/sp/works-image-smartphone.jpg");
-    min-height: 100vh;
+    min-height: 70vh;
     min-width: 100%;
   }
   .works-section .work-heading {
@@ -855,31 +937,27 @@ li {
     /*IE9以前に対応する*/
     font-size: 1.625rem;
   }
-  .works-section .slide-wrapper {
-    width: 320px;
-    height: 250px;
+  /*==================================================
+スライダーのためのcss
+===================================*/
+  .slider img {
+    width: 60vw;
+    /*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height: auto;
   }
-  .works-section .slide-wrapper #slide {
-    position: relative;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 500px;
+  .slick-dots li {
+    margin: 0 10px;
   }
-  .works-section .slide-wrapper #slide ul {
-    position: absolute;
-    height: 500px;
+  .slick-dots button {
+    width: 8px;
+    /*ドットボタンのサイズ*/
+    height: 8px;
+    /*ドットボタンのサイズ*/
   }
-  .works-section .slide-wrapper #slide ul li {
-    width: 320px;
-    height: 250px;
-  }
-  .works-section #button {
-    display: none;
+  .slick-prev,
+  .slick-next {
+    height: 25px;
+    width: 25px;
   }
   .price-section {
     padding: 95px 0 50px;
@@ -1118,6 +1196,8 @@ li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transition: padding .3s;
+    transition: padding .3s;
   }
   .header__inner__logo {
     width: 250px;
@@ -1137,6 +1217,17 @@ li {
   }
   .header__inner .hamburger {
     display: none;
+  }
+  .header__inner.small {
+    padding: 0 5vw;
+  }
+  .header__inner__logo.small {
+    width: 200px;
+  }
+  .nav__list.small {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
   }
   .section__inner {
     padding: 0 80px 0 140px;
@@ -1245,36 +1336,27 @@ li {
     /*IE9以前に対応する*/
     font-size: 1.875rem;
   }
-  .works-section .slide-wrapper {
-    width: 850px;
+  /*==================================================
+スライダーのためのcss
+===================================*/
+  .slider img {
+    width: 60vw;
+    /*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height: 70vh;
   }
-  .works-section .slide-wrapper #slide {
-    position: relative;
-    overflow: hidden;
-    height: 500px;
+  .slick-dots li {
+    margin: 10px 10px 0;
   }
-  .works-section .slide-wrapper #slide ul {
-    width: 3400px;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .slick-dots button {
+    width: 10px;
+    /*ドットボタンのサイズ*/
+    height: 10px;
+    /*ドットボタンのサイズ*/
   }
-  .works-section .slide-wrapper #slide ul li {
-    width: 850px;
-  }
-  .works-section #prevBtn {
-    position: absolute;
-    top: 230px;
-    left: 20px;
-  }
-  .works-section #nextBtn {
-    position: absolute;
-    top: 230px;
-    right: 20px;
+  .slick-prev,
+  .slick-next {
+    height: 30px;
+    width: 30px;
   }
   .price-section {
     padding: 95px 0 115px;
@@ -1492,7 +1574,7 @@ li {
     margin-left: 10px;
   }
   label {
-    margin-left: 10px;
+    margin-left: 5px;
     margin-bottom: 15px;
   }
   input[type="name"],

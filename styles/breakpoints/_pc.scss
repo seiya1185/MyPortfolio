@@ -21,6 +21,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transition: padding .3s;
     &__logo {
         width: 250px;
         }
@@ -31,7 +32,7 @@
                 margin-right: 3vw;
                 @include rem(16);
                 a {
-                color: $color-white;
+                    color: $color-white;
                 }
             }
         }
@@ -44,6 +45,20 @@
         }
     }
 }
+
+// jQuery適用css --------
+.header__inner.small {
+    padding: 0 5vw;
+}
+
+.header__inner__logo.small {
+    width: 200px;
+}
+
+.nav__list.small {
+    @include rem(14);
+}
+// ----------------
 
 .section__inner {
     padding: 0 80px 0 140px;
@@ -142,34 +157,30 @@
             }
         }
     }
-    .slide-wrapper {
-        width: 850px;
-        #slide {
-            position: relative;
-            overflow:hidden;
-            height:500px;
-            ul {
-            width: 3400px;
-            position: absolute;
-            display: flex;
-            justify-content: center;
-                li {
-                width: 850px;
-                }
-            }
-        }
-    }
+}
 
-        #prevBtn {
-        position: absolute;
-        top: 230px;
-        left: 20px;
-        }
-        #nextBtn {
-        position: absolute;
-        top: 230px;
-        right: 20px;
-        }
+/*==================================================
+スライダーのためのcss
+===================================*/
+
+.slider img {
+    width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:70vh;
+}
+
+.slick-dots li {
+    margin:10px 10px 0;
+}
+
+.slick-dots button {
+    width:10px;/*ドットボタンのサイズ*/
+    height:10px;/*ドットボタンのサイズ*/
+}
+
+.slick-prev,
+.slick-next {
+    height: 30px;
+    width: 30px;
 }
 
 // 価格のセクション部分
@@ -418,7 +429,7 @@ form div span {
 }
 
 label {
-    margin-left: 10px;
+    margin-left: 5px;
     margin-bottom: 15px;
 }
 

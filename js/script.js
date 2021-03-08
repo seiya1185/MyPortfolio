@@ -1,3 +1,33 @@
+  // ----- ヘッダーのサイズを変更する -----
+
+  $(function() {
+    $(window).scroll(function(){
+      if($(window).scrollTop() > 100) {
+        $(".header__inner").addClass("small");
+      }else{
+        $(".header__inner").removeClass("small");
+      }
+    });
+    $(window).scroll(function(){
+      if($(window).scrollTop() > 100) {
+        $(".header__inner__logo").addClass("small");
+      }else{
+        $(".header__inner__logo").removeClass("small");
+      }
+    });
+    $(window).scroll(function(){
+      if($(window).scrollTop() > 100) {
+        $(".nav__list").addClass("small");
+      }else{
+        $(".nav__list").removeClass("small");
+      }
+    });
+  });
+
+  // ----- ヘッダーのサイズを変更する -----
+
+
+
 $(function () {
   //ハンバーガーメニュー
   $(".hamburger-btn").click(function () {
@@ -26,150 +56,15 @@ $(function () {
   });
 });
 
-// ----- スクロール部分の実装（PC部分のみ） -----
-if (!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
-  $(function() {
-
-    var dir = -1;
-    var duration = 700;
-
-    $("#slide ul").prepend($("#slide li:last-child"));
-
-    $("#slide ul").css("left", -850);
-
-    function slide() {
-      // スクロール方向の判断
-    if (dir == -1) {
-      $("#slide ul").animate({"left" : "-=850px" },
-      duration, function() {
-        $(this).append($("#slide li:first-child"));
-        $(this).css("left", -850);
-      });
-    }else{
-      $("#slide ul").animate({"left" : "+=850px" },
-      duration, function() {
-        $(this).prepend($("#slide li:last-child"));
-        $(this).css("left", -850);
-      });
-    }
-  }
-
-   // 前へ戻るボタン
-    $("#prevBtn").click(function() {
-      dir = 1;
-
-      slide();
-    });
-
-   // 次へ進むボタン
-    $("#nextBtn").click(function() {
-      dir = -1;
-
-      slide();
-    });
-  });
-}
-
-  // ------ 実績のスワイプ部分 -----
-if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
-  //ここに書いた処理はスマホの時だけ有効
-
-
-$(document).ready(function()
-{
-
-  var duration = 700;
-
-  $("#slide ul").prepend($("#slide li:last-child"));
-
-  $("#slide ul").css("top", -250);
-
-  $(!swipe).on('touchmove.noScroll', function(e) {
-    e.preventDefault();
-    });
-
-	/** ①指が触れたか検知 */
-	$("#swipe").on("touchstart", start_check);
-
-	/** ②指が動いたか検知 */
-	$("#swipe").on("touchmove", move_check);
-
-	/** ③指が離れたか検知 */
-	$("#swipe").on("touchend", end_check);
-
-	/** 変数宣言 */
-	var moveY, posiY;
-
-
-	// ④タッチ開始時の処理
-	function start_check(event)
-	{
-		/** 現在の座標取得 */
-		posiY = getY(event);
-
-		/** 移動距離状態を初期化 */
-		moveY = '';
-
-		/** 表示メッセージを初期化 */
-		msgY = '';
-	}
-
-	// ⑤スワイプ中の処理
-	function move_check(event)
-	{
-
-
-		if (posiY - getY(event) > 70) // 70px以上移動でスワイプと判断
-		{
-			/** 下→上と判断 */
-			moveY = "top";
-		}
-		else if (posiY - getY(event) < -70)  // 70px以上移動でスワイプと判断
-		{
-			/** 上→下と判断 */
-			moveY = "bottom";
-		}
-	}
-
-	// ⑥指が離れた時の処理
-	function end_check(event)
-	{
-
-
-		if (moveY == "top")
-		{
-			$("#slide ul").animate({"top" : "-=250px" },
-      duration, function() {
-        $(this).append($("#slide li:first-child"));
-        $(this).css("top", -250);
-      });
-		}
-		else (moveY == "bottom")
-		{
-			$("#slide ul").animate({"bottom" : "-=250px" },
-      duration, function() {
-        $(this).prepend($("#slide li:last-child"));
-        $(this).css("bottom", -250);
-      });
-		}
-
-
-
-	}
-
-
-	// 座標取得処理
-	function getY(event)
-	{
-		//縦方向の座標を取得
-		return (event.originalEvent.touches[0].pageY);
-	}
-
-
+$('.slider').slick({
+  autoplay: false,//自動的に動き出すか。初期値はfalse。
+  infinite: true,//スライドをループさせるかどうか。初期値はtrue。
+  speed: 500,//スライドのスピード。初期値は300。
+  slidesToShow: 3,//スライドを画面に3枚見せる
+  slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
+  prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
+  nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
+  centerMode: true,//要素を中央ぞろえにする
+  variableWidth: true,//幅の違う画像の高さを揃えて表示
+  dots: true,//下部ドットナビゲーションの表示
 });
-
-// ------ 実績のスワイプ部分ここまで -----
-}
-
-
-

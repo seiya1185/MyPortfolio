@@ -226,7 +226,7 @@
 // --- 実績のセクション部分 ---
 .works-section {
   background-image: url("../img/sp/works-image-smartphone.jpg");
-  min-height: 100vh;
+  min-height: 70vh;
   min-width: 100%;
   .work-heading {
     margin-bottom: 10vh;
@@ -238,31 +238,32 @@
       }
     }
   }
-
-  // --- 実績サイトスライド部分 ---
-  .slide-wrapper {
-    width: 320px;
-    height: 250px;
-    #slide {
-      position: relative;
-      overflow:hidden;
-      display: flex;
-      justify-content: center;
-      height: 500px;
-      ul {
-        position: absolute;
-        height: 500px;
-        li {
-          width: 320px;
-          height: 250px;
-        }
-      }
-    }
-  }
-  #button {
-    display: none;
-  }
 }
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider img {
+  width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height:auto;
+}
+
+.slick-dots li {
+  margin:0 10px;
+}
+
+.slick-dots button {
+  width:8px;/*ドットボタンのサイズ*/
+  height:8px;/*ドットボタンのサイズ*/
+}
+
+.slick-prev,
+.slick-next {
+    height: 25px;
+    width: 25px;
+}
+
+// -------- 実績のセクションここまで --------
 
 .price-section {
   padding: 95px 0 50px;
