@@ -76,8 +76,8 @@
         width: 100vw;
         height: 100vh;
         transform: translateX(100vw);
-        transition: all 0.3s;
-        background-color: $color-black;
+        transition: all 0.6s;
+        background-color: rgba(135, 25, 0, 0.9);
         &__lists {
           display: flex;
           flex-direction: column;
@@ -87,7 +87,8 @@
           height: 100vh;
         }
         &__list {
-          @include rem(16);
+          @include rem(20);
+          margin-top: 20px;
           list-style: none;
           text-align: center;
         }

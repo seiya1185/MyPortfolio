@@ -454,6 +454,10 @@ li {
   background: #FFF;
 }
 
+.main .price-section .price-table .target td, .main .price-section .price-table td.target {
+  background: #fdeff9;
+}
+
 .main .making-order .making-heading {
   text-align: center;
   color: #ffffff;
@@ -831,9 +835,9 @@ li {
     height: 100vh;
     -webkit-transform: translateX(100vw);
             transform: translateX(100vw);
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    background-color: #333333;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+    background-color: rgba(135, 25, 0, 0.9);
   }
   .header__inner .hamburger__lists {
     display: -webkit-box;
@@ -853,9 +857,10 @@ li {
     height: 100vh;
   }
   .header__inner .hamburger__list {
-    font-size: 16px;
+    font-size: 20px;
     /*IE9以前に対応する*/
-    font-size: 1rem;
+    font-size: 1.25rem;
+    margin-top: 20px;
     list-style: none;
     text-align: center;
   }

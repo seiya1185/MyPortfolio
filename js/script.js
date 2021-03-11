@@ -106,3 +106,16 @@ $('.slider').slick({
   variableWidth: true,//幅の違う画像の高さを揃えて表示
   dots: true,//下部ドットナビゲーションの表示
 });
+
+// テーブルエルのハイライト ---------
+
+$(function() {
+  // セルをマウスオーバー
+  $("td").hover(function() {
+    $(this).parent().addClass("target");
+  }, function() {
+    $(".target").removeClass("target");
+  });
+});
+
+// テーブルセルのハイライトここまで ---------
