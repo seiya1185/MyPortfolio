@@ -656,6 +656,11 @@ li {
           justify-content: center;
 }
 
+.footer .twitter-icon {
+  position: relative;
+  margin-left: 60px;
+}
+
 .footer .twitter-icon > a {
   color: #ffffff;
 }
@@ -683,8 +688,77 @@ li {
 }
 
 .fab {
-  margin-right: 5px;
-  display: inline-block;
+  position: absolute;
+  top: -21px;
+  left: -75px;
+  padding: 10px;
+}
+
+/*1.フェードインアニメーションの指定*/
+.slideX {
+  opacity: 0;
+}
+
+/*一瞬表示されるのを防ぐ*/
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+/*2.上下の動きを指定*/
+.updown {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+.downup {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+/*3.左右の動きを指定*/
+.sect02 {
+  overflow: hidden;
+}
+
+/*横スクロールバーを隠す*/
+.slide-right {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+}
+
+.slide-left {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
 }
 
 @media screen and (max-width: 480px) {
@@ -1342,7 +1416,7 @@ li {
   .slider img {
     width: 60vw;
     /*スライダー内の画像を60vwにしてレスポンシブ化*/
-    height: 70vh;
+    height: 68vh;
   }
   .slick-dots li {
     margin: 10px 10px 0;

@@ -32,12 +32,12 @@
         </div>
         <!--ナビゲーション-->
         <nav class="nav">
-          <ul class="nav__lists">
-            <li class="nav__list"><a href="#">サービス</a></li>
-            <li class="nav__list"><a href="#">制作実績</a></li>
-            <li class="nav__list"><a href="#">料金</a></li>
-            <li class="nav__list"><a href="#">プロフィール</a></li>
-            <li class="nav__list"><a href="#">お問い合わせ</a></li>
+          <ul class="nav__lists"　id="page-link">
+            <li class="nav__list"><a href="#service">サービス</a></li>
+            <li class="nav__list"><a href="#works">制作実績</a></li>
+            <li class="nav__list"><a href="#price">料金</a></li>
+            <li class="nav__list"><a href="#about">プロフィール</a></li>
+            <li class="nav__list"><a href="#message">お問い合わせ</a></li>
           </ul>
         </nav>
         <!--hamburgerボタンー-->
@@ -50,16 +50,19 @@
         <nav class="hamburger">
           <ul class="hamburger__lists">
             <li class="hamburger__list">
-              <a class="hamburger__link" href="#">ハンバーガーメニュー</a>
+              <a class="hamburger__link" href="#service">サービス</a>
             </li>
             <li class="hamburger__list">
-              <a class="hamburger__link" href="#">ハンバーガーメニュー</a>
+              <a class="hamburger__link" href="#works">制作実績</a>
             </li>
             <li class="hamburger__list">
-              <a class="hamburger__link" href="#">ハンバーガーメニュー</a>
+              <a class="hamburger__link" href="#price">料金</a>
             </li>
             <li class="hamburger__list">
-              <a class="hamburger__link" href="#">ハンバーガーメニュー</a>
+              <a class="hamburger__link" href="#about">プロフィール</a>
+            </li>
+            <li class="hamburger__list">
+              <a class="hamburger__link" href="#message">お問い合わせ</a>
             </li>
           </ul>
         </nav>
@@ -98,13 +101,13 @@
         </div>
         <div class="section__end">
           <p>next service</p>
-          <a href="#"><span></span></a>
+          <a href="#service"><span></span></a>
         </div>
       </section>
       <!--//ここまでセクション-->
 
       <!--//ここからサービスセクション-->
-      <section class="servcie-section">
+      <section class="service-section" id="service">
         <div class="ser-heading">
           <h1 class="th-wrapper ser-theme">SERVICE</h1>
           <p class="ser-text">各種、お客様のご要望に沿えますよう、サービスを揃えております。</p>
@@ -112,7 +115,7 @@
 
         <div class="ser-menus">
 
-          <div Class="ser-content">
+          <div Class="ser-content slideX updown">
             <div class="image">
               <p>『Webサイト制作』</p>
               <img src="img/pc/display.png" alt="ディスプレイ">
@@ -129,7 +132,7 @@
             </div>
           </div>
 
-          <div Class="ser-content">
+          <div Class="ser-content slideX updown">
             <div class="image">
               <p>『ランディングページ作成』</p>
               <img src="img/pc/WEBsite-icon.png" alt="WEBサイト">
@@ -141,7 +144,7 @@
             </div>
           </div>
 
-          <div Class="ser-content">
+          <div Class="ser-content slideX updown">
             <div class="image">
               <p>『コーディング』</p>
               <img src="img/pc/smartphone.png" alt="スマートフォン">
@@ -162,14 +165,14 @@
       <!-- ここまでサービスセクション -->
 
       <!--//ここから実績のセクション-->
-      <section class="works-section">
+      <section class="works-section" id="works">
         <div class="work-heading">
           <h1 class="th-wrapper work-theme">WORKS</h1>
         </div>
         <div class="slide-wrapper" id="swipe">
           <div id="slide">
             <ul class="slider">
-              <li><img src="img/pc/work1.png" alt="カフェデモサイト"></li>
+              <li><a href="https://seiya1185.github.io/ABCcafe/" target="_blank" rel="noopener noreferrer"><img src="img/pc/work1.png" alt="カフェデモサイト"></a></li>
               <li><img src="img/pc/work2.png" alt="デモサイト"></li>
               <li><img src="img/pc/work1.png" alt=""></li>
               <li><img src="img/pc/work2.png" alt=""></li>
@@ -180,7 +183,7 @@
       <!-- ここまで実績のセクション -->
 
       <!-- ここから価格のセクション -->
-      <section class="price-section">
+      <section class="price-section" id="price">
         <div class="price-heading">
           <h1 class="th-wrapper price-theme">PRICE</h1>
         </div>
@@ -261,7 +264,7 @@
       <!-- ここまで制作手順のセクション -->
 
       <!-- ここからプロフィールのセクション -->
-      <section class="about-section">
+      <section class="about-section" id="about">
         <div class="about-heading">
           <div class="th-wrapper about-theme">ABOUT</div>
         </div>
@@ -293,14 +296,14 @@
 
 
       <!-- ここからメッセージのセクション -->
-      <section class="message-section">
+      <section class="message-section" id="message">
         <div class="message-heading">
           <div class="th-wrapper message-theme">
             MESSAGE
           </div>
         </div>
         <div class="message-content">
-          <form action="confirm.php" method="post" name="contact-form">
+          <form action="php/confirm.php" method="post" name="contact-form">
 
             <div>
               <label for="name">お名前<span>必須</span></label>
@@ -335,7 +338,7 @@
     <!--ここからフッター-->
     <footer class="footer">
       <div class="twitter-icon">
-        <a href="https://twitter.com/Q_and_Travel"><i class="fab fa-twitter-square icon-color fa-3x"></i>@Q_and_Travel</a>
+        <a href="https://twitter.com/Q_and_Travel" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square icon-color fa-3x"></i>@Q_and_Travel</a>
       </div>
       <nav class="nav">
         <ul class="nav__lists">

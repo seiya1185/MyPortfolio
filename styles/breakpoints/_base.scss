@@ -641,8 +641,12 @@ li {
   padding: 50px;
   display: flex;
   justify-content: center;
-  .twitter-icon > a {
-    color: $color-white;
+  .twitter-icon {
+    position: relative;
+    margin-left: 60px;
+    > a {
+      color: $color-white;
+    }
   }
   .nav {
     margin-left: 420px;
@@ -662,9 +666,44 @@ li {
   color: $color-white;
 }
 .fab {
-  margin-right: 5px;
-  display: inline-block;
+  position: absolute;
+  top: -21px;
+  left: -75px;
+  padding: 10px;
 }
 // -- アイコン色・配置ここまで --
 
 // --- ここまでフッターのデザイン ---
+
+
+// ------- ここからフェードインのcss -------
+
+/*1.フェードインアニメーションの指定*/
+.slideX {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    transform: translate(0);
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    transform: translate(0);
+    }
+}
+
+/*2.上下の動きを指定*/
+.updown {transform: translateY(-100px);}
+.downup {transform: translateY(100px);}
+
+/*3.左右の動きを指定*/
+.sect02{overflow: hidden;} /*横スクロールバーを隠す*/
+.slide-right {transform: translateX(200px);}
+.slide-left {transform: translateX(-200px);}
+
+// ------- ここまでフェードインのcss -------

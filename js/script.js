@@ -27,6 +27,44 @@
   // ----- ヘッダーのサイズを変更する -----
 
 
+  // ページ内リンクの設定 --------
+
+  $(function() {
+    $('a[href*="#"]').click(function() {
+
+      var target = $($(this).attr("href")).offset().top;
+
+      target -= 50;
+
+      $("html, body").animate({scrollTop: target}, 500);
+
+      return false;
+    });
+  });
+
+  // ------ ページ内リンク ------
+
+
+  // スライドイン ---------
+
+  $(function () {
+    $(window).scroll(function () {
+        const wHeight = $(window).height();
+        const scrollAmount = $(window).scrollTop();
+        const delayTime = 500;
+        $('.slideX').each(function(i) {
+            const targetPosition = $(this).offset().top;
+            if(scrollAmount > targetPosition - wHeight + 60) {
+              $(this).delay(i * delayTime).queue(()=> {
+                $(this).addClass("fadeInDown").dequeue();
+              });
+            }
+        });
+    });
+});
+
+  // スライドインここまで --------
+
 
 $(function () {
   //ハンバーガーメニュー
