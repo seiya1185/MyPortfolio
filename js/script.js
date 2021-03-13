@@ -119,3 +119,19 @@ $(function() {
 });
 
 // テーブルセルのハイライトここまで ---------
+
+$(function () {
+  $(window).scroll(function () {
+      const wHeight = $(window).height();
+      const scrollAmount = $(window).scrollTop();
+      const delayTime = 200;
+      $('.slideY').each(function(i) {
+          const targetPosition = $(this).offset().top;
+          if(scrollAmount > targetPosition - wHeight + 60) {
+            $(this).delay(i * delayTime).queue(()=> {
+              $(this).addClass("fadeInDown").dequeue();
+            });
+          }
+        });
+    });
+});

@@ -402,6 +402,58 @@ li {
   /*ドットボタンの現在地表示の色*/
 }
 
+.main .opacityText {
+  position: relative;
+}
+
+.main .opacityText span.mask {
+  position: relative;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  display: block;
+  line-height: 0;
+}
+
+.main .opacityText span.cap {
+  opacity: 0;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-shadow: 3px 3px 6px #777, -3px 3px 6px #777, 3px -3px 6px #777, -3px -3px 6px #777;
+  line-height: 1.5;
+}
+
+.main .opacityText:hover span.mask::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(88, 182, 211, 0.6), rgba(229, 93, 135, 0.6));
+}
+
+.main .opacityText img {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.main .opacityText:hover img {
+  opacity: 0.6;
+}
+
+.main .opacityText:hover span.cap {
+  opacity: 1;
+}
+
 .main .price-section {
   background-color: #932E40;
   color: #fff;
@@ -700,6 +752,11 @@ li {
 
 /*1.フェードインアニメーションの指定*/
 .slideX {
+  opacity: 0;
+}
+
+/*一瞬表示されるのを防ぐ*/
+.slideY {
   opacity: 0;
 }
 
