@@ -1126,6 +1126,7 @@ li {
   }
   .price-section .price-table {
     text-align: center;
+    width: 100%;
   }
   .price-section .price-table th {
     font-size: 0.7em;
@@ -1133,7 +1134,7 @@ li {
   }
   .price-section .price-table td {
     font-size: 0.4em;
-    padding: 20px 4px;
+    padding: 20px 10px;
     white-space: nowrap;
   }
   .price-section .price-table span {
