@@ -47,6 +47,8 @@
 
   // スライドイン ---------
 
+  // PC版のみ上からスライド
+if (!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
   $(function () {
     $(window).scroll(function () {
         const wHeight = $(window).height();
@@ -62,6 +64,27 @@
         });
     });
 });
+}
+
+// スマホ版のみ横からスライド
+if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
+  $(function () {
+    $(window).scroll(function () {
+        const wHeight = $(window).height();
+        const scrollAmount = $(window).scrollTop();
+        const delayTime = 500;
+        $('.slideX').each(function(i) {
+            const targetPosition = $(this).offset().top;
+            if(scrollAmount > targetPosition - wHeight + 60) {
+              $(this).delay(i * delayTime).queue(()=> {
+                $(this).addClass("fadeInDown").dequeue();
+                $(this).addClass("slide-left").dequeue();
+              });
+            }
+        });
+    });
+});
+}
 
   // スライドインここまで --------
 
