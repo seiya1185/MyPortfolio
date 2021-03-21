@@ -77,7 +77,7 @@ $(function () {
       $(".hamburger").removeClass("active");
     }
   });
-  $(".hamburger__list").click(function () {
+  $(".hamburger__link").click(function () {
     $(".hamburger,.hamburger-btn").removeClass("active");
   });
 

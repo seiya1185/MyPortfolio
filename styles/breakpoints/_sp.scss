@@ -264,6 +264,12 @@
     width: 25px;
 }
 
+.opacityText {
+  span.cap {
+    @include rem(10);
+  }
+}
+
 // -------- 実績のセクションここまで --------
 
 .price-section {

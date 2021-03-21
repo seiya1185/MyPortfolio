@@ -1095,6 +1095,11 @@ li {
     height: 25px;
     width: 25px;
   }
+  .opacityText span.cap {
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+  }
   .price-section {
     padding: 95px 0 50px;
   }
