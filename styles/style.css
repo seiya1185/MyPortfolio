@@ -47,6 +47,12 @@ li {
 }
 
 .main {
+  /*1.フェードインアニメーションの指定*/
+  /*一瞬表示されるのを防ぐ*/
+  /*一瞬表示されるのを防ぐ*/
+  /*2.上下の動きを指定*/
+  /*3.左右の動きを指定*/
+  /*横スクロールバーを隠す*/
   /*==================================================
 スライダーのためのcss
 ===================================*/
@@ -308,6 +314,72 @@ li {
 
 .main .ser-menus .ser-content .text-content .topic {
   margin-bottom: 8px;
+}
+
+.main .slideX {
+  opacity: 0;
+}
+
+.main .slideY {
+  opacity: 0;
+}
+
+.main .fadeInDown {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+.main .updown {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+.main .downup {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.main .sect02 {
+  overflow: hidden;
+}
+
+.main .slide-right {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+}
+
+.main .slide-left {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
 }
 
 .main .works-section {
@@ -748,78 +820,6 @@ li {
   top: -21px;
   left: -75px;
   padding: 10px;
-}
-
-/*1.フェードインアニメーションの指定*/
-.slideX {
-  opacity: 0;
-}
-
-/*一瞬表示されるのを防ぐ*/
-.slideY {
-  opacity: 0;
-}
-
-/*一瞬表示されるのを防ぐ*/
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 1;
-  -webkit-transform: translate(0);
-          transform: translate(0);
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-/*2.上下の動きを指定*/
-.updown {
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
-}
-
-.downup {
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
-}
-
-/*3.左右の動きを指定*/
-.sect02 {
-  overflow: hidden;
-}
-
-/*横スクロールバーを隠す*/
-.slide-right {
-  -webkit-transform: translateX(200px);
-          transform: translateX(200px);
-}
-
-.slide-left {
-  -webkit-transform: translateX(-200px);
-          transform: translateX(-200px);
 }
 
 @media screen and (max-width: 480px) {

@@ -305,6 +305,39 @@ li {
   }
 }
 
+// ------- ここからフェードインのcss -------
+
+/*1.フェードインアニメーションの指定*/
+.slideX {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+.slideY {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    transform: translate(0);
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    transform: translate(0);
+    }
+}
+
+/*2.上下の動きを指定*/
+.updown {transform: translateY(-100px);}
+.downup {transform: translateY(100px);}
+
+/*3.左右の動きを指定*/
+.sect02{overflow: hidden;} /*横スクロールバーを隠す*/
+.slide-right {transform: translateX(200px);}
+.slide-left {transform: translateX(-200px);}
+
+// ------- ここまでフェードインのcss -------
+
 // --- 実績のセクション部分 ---
   .works-section {
     background-position: center;
@@ -437,6 +470,8 @@ li {
 .opacityText:hover span.cap {
   opacity: 1;
 }
+
+
 
   // ------------ ここまで実績のセクション --------------
 
@@ -725,37 +760,3 @@ li {
 // -- アイコン色・配置ここまで --
 
 // --- ここまでフッターのデザイン ---
-
-
-// ------- ここからフェードインのcss -------
-
-/*1.フェードインアニメーションの指定*/
-.slideX {opacity: 0;} /*一瞬表示されるのを防ぐ*/
-.slideY {opacity: 0;} /*一瞬表示されるのを防ぐ*/
-.fadeInDown {
-    animation-name: fadeInDown;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    opacity: 1;
-    transform: translate(0);
-}
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-    }
-    100% {
-    opacity: 1;
-    transform: translate(0);
-    }
-}
-
-/*2.上下の動きを指定*/
-.updown {transform: translateY(-100px);}
-.downup {transform: translateY(100px);}
-
-/*3.左右の動きを指定*/
-.sect02{overflow: hidden;} /*横スクロールバーを隠す*/
-.slide-right {transform: translateX(200px);}
-.slide-left {transform: translateX(-200px);}
-
-// ------- ここまでフェードインのcss -------
