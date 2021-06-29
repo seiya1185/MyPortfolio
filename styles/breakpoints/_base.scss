@@ -5,8 +5,8 @@ $color-white: #ffffff;
 
 //font-family
 //-->ヒラギノver.
-$font-main: "Noto Sans JP","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
-  Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$font-main: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+  "MS PGothic", sans-serif;
 
 //ブレイクポイント
 $tb: 959px; //タブレット
@@ -32,9 +32,9 @@ $mb: 559px; //スマホ
 //$sizeにpx表示を入れて使う
 
 @mixin rem($size) {
-    font-size: $size + px; /*IE9以前に対応する*/
-    font-size: ($size / 16) + rem;
-  }
+  font-size: $size + px; /*IE9以前に対応する*/
+  font-size: ($size / 16) + rem;
+}
 
 //*------------------*
 //*  base(共通)
@@ -63,23 +63,15 @@ li {
   list-style-type: none;
 }
 
-html,body{
-	height: 100%;/*高さを100%にして描画エリアをとる*/
+html,
+body {
+  height: 100%; /*高さを100%にして描画エリアをとる*/
 }
 
-#particles-js{ 
-	position:fixed;/*描画固定*/
-	z-index:-1;/*描画を一番下に*/
-	width: 100%;
-	height: 100%;
-	background-color: $color-white;/*背景色*/
-}
-
-#wrapper{
-	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
-	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
-	width:100%;
-	height: 100%;
+#particles-js {
+  width: 100%;
+  height: 780px;
+  background-color: $color-white; /*背景色*/
 }
 
 //*------------------*
@@ -102,7 +94,6 @@ html,body{
 //スマホのナビゲーション(ハンバーガーメニュー)
 //ハンバーガーの部分
 
-
 //------------//ここまでhamburgerメニュー------------------>
 
 //*------------------*
@@ -117,28 +108,29 @@ html,body{
     min-height: 100vh;
     min-width: 100%;
     text-align: center;
-    display: table;
+    position: relative;
     .texts {
-      display: table-cell;
-      vertical-align: middle;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       .fv-theme {
         @include rem(53);
         margin: 40px 0 50px;
         letter-spacing: normal;
-        text-shadow:  3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
+        text-shadow: 3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
       }
       .fv-tx {
         @include rem(13);
         letter-spacing: normal;
-        text-shadow:  3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
+        text-shadow: 3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
       }
     }
   }
 
-
   // sectionの一つ目
   .ft-section {
-    background-color: #932E40;
+    background-color: #932e40;
     color: #fff;
     padding: 85px 0 35px;
   }
@@ -151,7 +143,7 @@ html,body{
     font-weight: normal;
     position: relative;
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       background-color: #fff;
       bottom: -15px;
@@ -164,17 +156,16 @@ html,body{
     &:after {
       position: absolute;
       top: -10px;
-      content: '';
+      content: "";
       display: inline-block;
       transform: rotate(210deg);
-      width:2em;
-      height:2em;
+      width: 2em;
+      height: 2em;
       background: url("../img/pc/icho.png") no-repeat;
       background-size: contain;
       margin-left: 15px;
     }
   }
-
 
   //sectionの共通inner設定
   .section__inner {
@@ -223,7 +214,7 @@ html,body{
       padding: 20px;
       position: relative;
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         left: -45px;
         top: 36px;
@@ -236,128 +227,141 @@ html,body{
   .section__end {
     text-align: center;
     a {
-        margin-top: 100px;
-        position: relative;
-        color: #fff;
-        z-index: 2;
-        display: inline-block;
-        -webkit-transform: translate(0, -50%);
-        transform: translate(0, -50%);
-        text-decoration: none;
-        span {
-            position: absolute;
-            top: -70px;
-            left: 50%;
-            width: 24px;
-            height: 24px;
-            margin-left: -12px;
-            border-left: 1px solid #fff;
-            border-bottom: 1px solid #fff;
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            -webkit-animation: sdb 1.5s infinite;
-            animation: sdb 1.5s infinite;
-            box-sizing: border-box;
-        }
+      margin-top: 100px;
+      position: relative;
+      color: #fff;
+      z-index: 2;
+      display: inline-block;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      text-decoration: none;
+      span {
+        position: absolute;
+        top: -70px;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: sdb 1.5s infinite;
+        animation: sdb 1.5s infinite;
+        box-sizing: border-box;
+      }
     }
-        @-webkit-keyframes sdb {
-            0% {
-                -webkit-transform: rotate(-45deg) translate(0, 0);
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-                opacity: 0;
-            }
-        }
-        @keyframes sdb {
-            0% {
-                transform: rotate(-45deg) translate(0, 0);
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: rotate(-45deg) translate(-20px, 20px);
-                opacity: 0;
-        }
+    @-webkit-keyframes sdb {
+      0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+      }
     }
-}
+    @keyframes sdb {
+      0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+      }
+    }
+  }
 
-
-// --- サービス内容 ---
-// --- サービス内容の3つあるトピック ---
-.ser-menus {
-  display: flex;
-  justify-content: center;
-  .ser-content {
+  // --- サービス内容 ---
+  // --- サービス内容の3つあるトピック ---
+  .ser-menus {
+    display: flex;
+    justify-content: center;
+    .ser-content {
       height: 100%;
       border: 1px solid #333;
       border-radius: 3px;
-  .image {
-      text-align: center;
-      p {
+      .image {
+        text-align: center;
+        p {
           margin: 1.5em 0;
           letter-spacing: 0.2em;
-      }
-      img {
+        }
+        img {
           height: 95px;
           width: 95px;
           margin-bottom: 1.5em;
+        }
       }
-  }
-  .text-content {
-      background-color: #738851;
-      height: 8em;
-      color: $color-white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .topic {
+      .text-content {
+        background-color: #738851;
+        height: 8em;
+        color: $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .topic {
           margin-bottom: 8px;
-          }
+        }
       }
+    }
   }
-}
 
-// ------- ここからフェードインのcss -------
+  // ------- ここからフェードインのcss -------
 
-/*1.フェードインアニメーションの指定*/
-.slideX {opacity: 0;} /*一瞬表示されるのを防ぐ*/
-.slideY {opacity: 0;} /*一瞬表示されるのを防ぐ*/
-.fadeInDown {
+  /*1.フェードインアニメーションの指定*/
+  .slideX {
+    opacity: 0;
+  } /*一瞬表示されるのを防ぐ*/
+  .slideY {
+    opacity: 0;
+  } /*一瞬表示されるのを防ぐ*/
+  .fadeInDown {
     animation-name: fadeInDown;
     animation-duration: 3s;
     animation-fill-mode: forwards;
     opacity: 1;
     transform: translate(0);
-}
-@keyframes fadeInDown {
+  }
+  @keyframes fadeInDown {
     0% {
-        opacity: 0;
+      opacity: 0;
     }
     100% {
-    opacity: 1;
-    transform: translate(0);
+      opacity: 1;
+      transform: translate(0);
     }
-}
+  }
 
-/*2.上下の動きを指定*/
-.updown {transform: translateY(-100px);}
-.downup {transform: translateY(100px);}
+  /*2.上下の動きを指定*/
+  .updown {
+    transform: translateY(-100px);
+  }
+  .downup {
+    transform: translateY(100px);
+  }
 
-/*3.左右の動きを指定*/
-.sect02{overflow: hidden;} /*横スクロールバーを隠す*/
-.slide-right {transform: translateX(200px);}
-.slide-left {transform: translateX(-200px);}
+  /*3.左右の動きを指定*/
+  .sect02 {
+    overflow: hidden;
+  } /*横スクロールバーを隠す*/
+  .slide-right {
+    transform: translateX(200px);
+  }
+  .slide-left {
+    transform: translateX(-200px);
+  }
 
-// ------- ここまでフェードインのcss -------
+  // ------- ここまでフェードインのcss -------
 
-// --- 実績のセクション部分 ---
+  // --- 実績のセクション部分 ---
   .works-section {
     background-position: center;
     background-size: cover;
@@ -366,7 +370,7 @@ html,body{
     .work-heading {
       .work-theme {
         &:before {
-          content: '制作実績';
+          content: "制作実績";
           position: absolute;
           letter-spacing: 0.2em;
           font-weight: bold;
@@ -376,134 +380,135 @@ html,body{
     }
   }
 
-/*==================================================
+  /*==================================================
 スライダーのためのcss
 ===================================*/
-.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
-  width:94%;
-  margin:0 auto;
-}
+  .slider {
+    /*横幅94%で左右に余白を持たせて中央寄せ*/
+    width: 94%;
+    margin: 0 auto;
+  }
 
-.slider .slick-slide {
-  transform: scale(0.8);/*左右の画像のサイズを80%に*/
-  transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
-  opacity: 0.5;/*透過50%*/
-}
+  .slider .slick-slide {
+    transform: scale(0.8); /*左右の画像のサイズを80%に*/
+    transition: all 0.5s; /*拡大や透過のアニメーションを0.5秒で行う*/
+    opacity: 0.5; /*透過50%*/
+  }
 
-.slider .slick-slide.slick-center{
-  transform: scale(1);/*中央の画像のサイズだけ等倍に*/
-  opacity: 1;/*透過なし*/
-}
+  .slider .slick-slide.slick-center {
+    transform: scale(1); /*中央の画像のサイズだけ等倍に*/
+    opacity: 1; /*透過なし*/
+  }
 
+  /*矢印の設定*/
 
-/*矢印の設定*/
+  /*戻る、次へ矢印の位置*/
+  .slick-prev,
+  .slick-next {
+    position: absolute; /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer; /*マウスカーソルを指マークに*/
+    outline: none; /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666; /*矢印の色*/
+    border-right: 2px solid #666; /*矢印の色*/
+  }
 
-/*戻る、次へ矢印の位置*/
-.slick-prev,
-.slick-next {
-  position: absolute;/*絶対配置にする*/
-  top: 42%;
-  cursor: pointer;/*マウスカーソルを指マークに*/
-  outline: none;/*クリックをしたら出てくる枠線を消す*/
-  border-top: 2px solid #666;/*矢印の色*/
-  border-right: 2px solid #666;/*矢印の色*/
-}
+  .slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+  }
 
-.slick-prev {/*戻る矢印の位置と形状*/
-  left: -1.5%;
-  transform: rotate(-135deg);
-}
+  .slick-next {
+    /*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+  }
 
-.slick-next {/*次へ矢印の位置と形状*/
-  right: -1.5%;
-  transform: rotate(45deg);
-}
+  /*ドットナビゲーションの設定*/
 
-/*ドットナビゲーションの設定*/
+  .slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+  }
 
-.slick-dots {
-  text-align:center;
-  margin:20px 0 0 0;
-}
+  .slick-dots li {
+    display: inline-block;
+  }
 
-.slick-dots li {
-  display:inline-block;
-}
-
-.slick-dots button {
-  color: transparent;
-  outline: none;
-  display:block;
-  border-radius:50%;
-  background:#ccc;/*ドットボタンの色*/
-}
-
-.slick-dots .slick-active button{
-  background:#333;/*ドットボタンの現在地表示の色*/
-}
-
-// --------- 実績サイトの上に表示する文言 ----------
-
-.opacityText {
-  position: relative; //テキストの基点となる位置を定義
-  span.mask {
-    position: relative; //グラデーションの基点となる位置を定義
-    transition: .3s ease-in-out; // 移り変わる速さを変更したい場合はこの数値を変更
+  .slick-dots button {
+    color: transparent;
+    outline: none;
     display: block;
-    line-height: 0;
+    border-radius: 50%;
+    background: #ccc; /*ドットボタンの色*/
   }
-  span.cap {
-    opacity: 0;
-    transition: .5s ease-in-out;
+
+  .slick-dots .slick-active button {
+    background: #333; /*ドットボタンの現在地表示の色*/
+  }
+
+  // --------- 実績サイトの上に表示する文言 ----------
+
+  .opacityText {
+    position: relative; //テキストの基点となる位置を定義
+    span.mask {
+      position: relative; //グラデーションの基点となる位置を定義
+      transition: 0.3s ease-in-out; // 移り変わる速さを変更したい場合はこの数値を変更
+      display: block;
+      line-height: 0;
+    }
+    span.cap {
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $color-white;
+      text-shadow: 3px 3px 6px #777, -3px 3px 6px #777, 3px -3px 6px #777, -3px -3px 6px #777;
+      line-height: 1.5;
+    }
+  }
+
+  .opacityText:hover span.mask::before {
+    content: "";
     position: absolute;
-    z-index: 3;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: $color-white;
-    text-shadow:  3px 3px 6px #777, -3px 3px 6px #777, 3px -3px 6px #777, -3px -3px 6px #777;
-    line-height: 1.5;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(88, 182, 211, 0.6), rgba(229, 93, 135, 0.6));
   }
-}
 
-.opacityText:hover span.mask::before {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg,rgba(88,182,211,.6),rgba(229,93,135,.6));
-}
+  .opacityText img {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
 
-.opacityText img {
-  opacity: 1;
-  transition: .3s ease-in-out;
-}
+  .opacityText:hover img {
+    //hoverした時の変化
+    opacity: 0.6;
+  }
 
-.opacityText:hover img { //hoverした時の変化
-  opacity: 0.6;
-}
-
-.opacityText:hover span.cap {
-  opacity: 1;
-}
-
-
+  .opacityText:hover span.cap {
+    opacity: 1;
+  }
 
   // ------------ ここまで実績のセクション --------------
 
   .price-section {
-    background-color: #932E40;
+    background-color: #932e40;
     color: #fff;
     .price-heading {
       text-align: center;
       .price-theme {
-        color: rgba(255,255,255,0.4);
+        color: rgba(255, 255, 255, 0.4);
         margin-top: 0;
         &:before {
-          content: '価格';
+          content: "価格";
           position: absolute;
           letter-spacing: 0.3em;
           font-weight: bold;
@@ -511,7 +516,7 @@ html,body{
         }
         &:after {
           position: absolute;
-          content: '';
+          content: "";
           display: inline-block;
           transform: rotate(220deg);
           background: url("../img/pc/reaf.png") no-repeat;
@@ -520,135 +525,131 @@ html,body{
       }
     }
     .price-tx {
-      letter-spacing: .3em;
+      letter-spacing: 0.3em;
       line-height: 25px;
     }
     .price-table {
-    margin: 0 auto;
-    color: $color-black;
-    border-collapse: separate;
-    border-spacing: 1px;
-    th {
-      background: #E5E5E5;
-    }
-    td {
-      background: #FFF;
-    }
-    .target td, td.target {
-      background: #fdeff9;
-    }
-  }
-}
-
-// ------ 制作手順の装飾 ------
-.making-order {
-  .making-heading {
-    text-align: center;
-    color: $color-white;
-    background-color: #738851;
-  }
-  .making-content {
-    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../img/common/sanmon.jpeg");
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
-    min-width: 100%;
-    .making-parts {
-      .making-part {
-        background-image: url("../img/common/frame.png");
-        background-position: center;
-        background-size: cover;
+      margin: 0 auto;
+      color: $color-black;
+      border-collapse: separate;
+      border-spacing: 1px;
+      th {
+        background: #e5e5e5;
+      }
+      td {
+        background: #fff;
+      }
+      .target td,
+      td.target {
+        background: #fdeff9;
       }
     }
   }
-}
 
-// -- 番号の画像 & 細かい調整 --
-.adjust1 {
-  position: relative;
-  > h3 {
-    display: inline-block;
-    border-bottom: 1px solid #000;
-    &:before {
-      position: absolute;
-      content: '';
-      background: url("../img/common/one.png") no-repeat;
-      display: inline-block;
-      background-size: contain;
+  // ------ 制作手順の装飾 ------
+  .making-order {
+    .making-heading {
+      text-align: center;
+      color: $color-white;
+      background-color: #738851;
+    }
+    .making-content {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/common/sanmon.jpeg");
+      background-position: center;
+      background-size: cover;
+      min-height: 100vh;
+      min-width: 100%;
+      .making-parts {
+        .making-part {
+          background-image: url("../img/common/frame.png");
+          background-position: center;
+          background-size: cover;
+        }
+      }
     }
   }
-}
-.adjust2 {
-  position: relative;
-  > h3 {
-    display: inline-block;
-    border-bottom: 1px solid #000;
-    &:before {
-      position: absolute;
-      content: '';
-      background: url("../img/common/two.png") no-repeat;
-      display: inline-block;
-      background-size: contain;
-    }
-  }
-}
-.adjust3 {
-  position: relative;
-  > h3 {
-    display: inline-block;
-    border-bottom: 1px solid #000;
-    &:before {
-      position: absolute;
-      content: '';
-      background: url("../img/common/three.png") no-repeat;
-      display: inline-block;
-      background-size: contain;
-    }
-  }
-}
-.adjust4 {
-  position: relative;
-  > h3 {
-    display: inline-block;
-    border-bottom: 1px solid #000;
-    &:before {
-      position: absolute;
-      content: '';
-      background: url("../img/common/four.png") no-repeat;
-      display: inline-block;
-      background-size: contain;
-    }
-  }
-}
-.adjust5 {
-  position: relative;
-  > h3 {
-    display: inline-block;
-    border-bottom: 1px solid #000;
-    &:before {
-      position: absolute;
-      content: '';
-      background: url("../img/common/five.png") no-repeat;
-      display: inline-block;
-      background-size: contain;
-    }
-  }
-}
 
-// ------ 制作手順の装飾 ------
+  // -- 番号の画像 & 細かい調整 --
+  .adjust1 {
+    position: relative;
+    > h3 {
+      display: inline-block;
+      border-bottom: 1px solid #000;
+      &:before {
+        position: absolute;
+        content: "";
+        background: url("../img/common/one.png") no-repeat;
+        display: inline-block;
+        background-size: contain;
+      }
+    }
+  }
+  .adjust2 {
+    position: relative;
+    > h3 {
+      display: inline-block;
+      border-bottom: 1px solid #000;
+      &:before {
+        position: absolute;
+        content: "";
+        background: url("../img/common/two.png") no-repeat;
+        display: inline-block;
+        background-size: contain;
+      }
+    }
+  }
+  .adjust3 {
+    position: relative;
+    > h3 {
+      display: inline-block;
+      border-bottom: 1px solid #000;
+      &:before {
+        position: absolute;
+        content: "";
+        background: url("../img/common/three.png") no-repeat;
+        display: inline-block;
+        background-size: contain;
+      }
+    }
+  }
+  .adjust4 {
+    position: relative;
+    > h3 {
+      display: inline-block;
+      border-bottom: 1px solid #000;
+      &:before {
+        position: absolute;
+        content: "";
+        background: url("../img/common/four.png") no-repeat;
+        display: inline-block;
+        background-size: contain;
+      }
+    }
+  }
+  .adjust5 {
+    position: relative;
+    > h3 {
+      display: inline-block;
+      border-bottom: 1px solid #000;
+      &:before {
+        position: absolute;
+        content: "";
+        background: url("../img/common/five.png") no-repeat;
+        display: inline-block;
+        background-size: contain;
+      }
+    }
+  }
+
+  // ------ 制作手順の装飾 ------
 
   .about-section {
-    background-image: repeating-linear-gradient(
-    45deg,
-    #e8e8e8,#e8e8e8 5px,
-    rgba(0,0,0,0)0,
-    rgba(0,0,0,0)10px
-    );
+    background-image: repeating-linear-gradient(45deg, #e8e8e8, #e8e8e8 5px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10px);
     .about-heading {
       text-align: center;
       .about-theme {
         &:before {
-          content: 'プロフィール';
+          content: "プロフィール";
           position: absolute;
           letter-spacing: 0.2em;
           font-weight: bold;
@@ -663,10 +664,10 @@ html,body{
         .pr-place {
           border-bottom: 1px solid #000;
           font-weight: 300;
-          text-shadow:  3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
+          text-shadow: 3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
         }
         .pr-tx {
-          text-shadow:  3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
+          text-shadow: 3px 3px 6px #ffffff, -3px 3px 6px #ffffff, 3px -3px 6px #ffffff, -3px -3px 6px #ffffff;
         }
       }
     }
@@ -674,10 +675,9 @@ html,body{
 
   // プロフィール画像部分
   .profile-image > img {
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
+    object-fit: cover;
+    border-radius: 50%;
+  }
 
   // --- ここからお問い合わせフォームのデザイン ---
 
@@ -686,7 +686,7 @@ html,body{
       text-align: center;
       .message-theme {
         &:before {
-          content: 'お問い合わせ';
+          content: "お問い合わせ";
           position: absolute;
           letter-spacing: 0.2em;
           font-weight: bold;
@@ -703,8 +703,8 @@ html,body{
   }
 
   form div span {
-    border: 1px #932E40 solid;
-    background-color: #932E40;
+    border: 1px #932e40 solid;
+    background-color: #932e40;
     color: $color-white;
   }
 
@@ -721,9 +721,8 @@ html,body{
     width: 100%;
   }
 
-
   input[type="submit"] {
-    background-color: #932E40;
+    background-color: #932e40;
     padding: 15px 28px;
     border-radius: 30px;
     color: $color-white;
@@ -732,13 +731,12 @@ html,body{
   // --- ここまでフォームの装飾 ---
 
   // --- ここまでお問い合わせのフォームのデザイン ---
-
 }
 
 // ----- ここからフッター -----
 
 .footer {
-  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../img/pc/footer-image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/pc/footer-image.jpg");
   background-position: center;
   background-size: cover;
   min-height: 40vh;

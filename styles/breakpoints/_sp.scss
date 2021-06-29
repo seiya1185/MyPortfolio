@@ -108,10 +108,13 @@
   }
 }
 
+
+
 .main {
   .fv {
     background-image: url("../img/sp/fv-image-sm.jpg");
     .texts {
+      width: 90%;
       .fv-theme {
         @include rem(37);
         margin-bottom: 40px;
@@ -434,8 +437,14 @@
       .pr-tx {
         @include rem(15);
         margin-bottom: 50px;
+        .pr-tx1 {
+          margin-bottom: 10px;
+        }
         .pr-tx1 br {
           display: none;
+        }
+        .pr-tx2 {
+          margin-bottom: 10px;
         }
         .pr-tx2 br {
           display: none;
@@ -513,5 +522,3 @@ input[type="submit"] {
     display: none;
   }
 }
-
-
