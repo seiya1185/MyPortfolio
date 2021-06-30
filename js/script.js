@@ -244,7 +244,7 @@ particlesJS("particles-js", {
 //テキストのカウントアップ+バーの設定
 var bar = new ProgressBar.Line(splash_text, {//id名を指定
 	easing: 'easeInOut',//アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
-	duration: 2000,//時間指定(1000＝1秒)
+	duration: 5000,//時間指定(1000＝1秒)
 	strokeWidth: 0.2,//進捗ゲージの太さ
 	color: '#fff',//進捗ゲージのカラー
 	trailWidth: 0.2,//ゲージベースの線の太さ
