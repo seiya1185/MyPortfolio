@@ -27,6 +27,15 @@
 </head>
 
 <body>
+
+  <div id="splash">
+    <div id="splash_text"></div>
+    <div class="loader_cover loader_cover-up"></div>
+    <!--上に上がるエリア-->
+    <div class="loader_cover loader_cover-down"></div>
+    <!--下に下がるエリア-->
+    <!--/splash-->
+  </div>
   <!--ここからヘッダー-->
   <header class="header">
     <div class="header__inner">
@@ -77,14 +86,14 @@
   <!--ここからメインコンテンツ-->
   <main class="main">
     <!--ここからファーストビュー -->
-      <div id="particles-js" class="fv">
-        <div class="texts">
-          <h2 class="fv-theme">Welcome To<br>
-            My PORTFOLIO</h2>
-          <p class="fv-tx">～ 様々な目的に沿ったWebサイトを ～<br>
-            迅速な対応・親密なコミュニケーションをお約束いたします。</p>
-        </div>
+    <div id="particles-js" class="fv">
+      <div class="texts">
+        <h2 class="fv-theme">Welcome To<br>
+          My PORTFOLIO</h2>
+        <p class="fv-tx">～ 様々な目的に沿ったWebサイトを ～<br>
+          迅速な対応・親密なコミュニケーションをお約束いたします。</p>
       </div>
+    </div>
     <!--//ここまでファーストビュー -->
 
     <!--ここからセクション （セクションの数だけコピーして使う）-->
@@ -300,8 +309,8 @@
             <div class="pr-tx">
               <p class="pr-tx1">効果のある・集客力のあるWebサイトは、ただ制作しただけでは<br>決して生み出すことはできません。</p>
               <p class="pr-tx2">『サイトを作る目的』『ターゲット』『事業方針』など、お客様から頂く<br>
-              様々な情報があってこそ、初めて、理想的なサイトや制作後の運用が<br>
-              見えてきます。最後に「作ってよかった」と思っていただけるようなサイト制作を目指します。</p>
+                様々な情報があってこそ、初めて、理想的なサイトや制作後の運用が<br>
+                見えてきます。最後に「作ってよかった」と思っていただけるようなサイト制作を目指します。</p>
               <p class="pr-tx3">ぜひ一度お問い合わせいただき、お客様のご要望をお聞かせください。</p>
             </div>
           </div>
@@ -369,10 +378,11 @@
   </footer>
   <!--//ここまでフッター-->
   <!--jQuery読み込み-->
-  <script src="//code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="//code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
   <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="//rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 
